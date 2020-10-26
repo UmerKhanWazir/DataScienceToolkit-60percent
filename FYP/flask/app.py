@@ -33,7 +33,7 @@ app = Flask(__name__)
 app.config.from_pyfile('config.cfg')
 mail = Mail(app)
 
-s = URLSafeTimedSerializer('123456789umeryusra987654321')
+s = URLSafeTimedSerializer('****')
 
 user_id = 1
 page = ""
@@ -44,14 +44,14 @@ UPLOAD_FOLDER = '/FYP/flask/data/files'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 github_blueprint = make_github_blueprint(client_id='e67539e6226d649008df',
-                                              client_secret='0a121d25fd29ddb8c949e0b8c18ac5ef78db9790')
+                                              client_secret='********')
 app.register_blueprint(github_blueprint, url_prefix = '/github_login')
 
 oauth = OAuth(app)
 google = oauth.register(
     name='google',
     client_id="722544995990-4sfc9r2rjbr9o5bf93uv1mdhf8ji48t6.apps.googleusercontent.com",
-    client_secret="eaV1L7G0JY4r4eKyMqqgbfgC",
+    client_secret="**********",
     access_token_url='https://accounts.google.com/o/oauth2/token',
     access_token_params=None,
     authorize_url='https://accounts.google.com/o/oauth2/auth',
