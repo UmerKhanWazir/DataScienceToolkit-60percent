@@ -1,0 +1,35 @@
+{% extends "./sidebar-09/home.html" %}
+{% block content %} 
+            <div class="w3-row-padding w3-center w3-margin-top" style="margin-left: 220px;">
+                <div class="w3-third">
+                  <div class="w3-card w3-container" style="background-color:rgb(239, 243, 247); min-height:460px; width: 900px; height:max-content;">
+                    <h1 class=home__title-color style="font-size:60px;" >Respository <i class="fa fa-database"></i></h1>
+                    <br><br>
+                    <h1 class="heading" style="color: dodgerblue;">My Files</h1><br><br>
+                    {% for item in path %}
+                      <tr>
+                        <div style="border:outset; margin-left: 250px; width:280px;">
+                        <td><a href="/upload-from-repository/{{item[0]}}">{{item[0]}}</a></td>
+                        <br /><br />
+                      </div>
+                      </tr>
+                      {% endfor %}
+                      <br />
+                      <br />
+                      <br />
+                      <h1  class="heading" style="color: dodgerblue;">Other Repositories</h1><br><br>
+                      {% for item in path1 %}
+                      <tr>
+                        <div style="border:outset; margin-left:250px; width:280px; ">
+                        <td><a href="/upload-from-repository/{{item[0]}}">{{item[0]}}</a></td>
+                        <br /><br />
+                      </div>
+                      </tr>
+                      {% endfor %}
+                    <br>
+                  </div>
+               </div>
+            </div>
+{% endblock %}
+              
+                

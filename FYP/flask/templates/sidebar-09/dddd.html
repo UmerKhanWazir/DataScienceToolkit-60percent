@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link
+      rel="stylesheet"
+      href="./static/home.css"
+    />   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <link href='https://kit.fontawesome.com/a076d05399.js'>
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Settings</title>
+    </head>
+    <body>
+   
+      <!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card " id="myNavbar">
+      <a href="#home" class="w3-bar-item w3-button w3-wide w3-hover-white"><span class="home__title-color" style="font-size:large; font-family: 'Tangerine', serif;" >DATA SCIENCE TOOLKIT</span></a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="#home" class="w3-bar-item w3-button w3-hover-light-blue"><span class="home__title-color" ><i class="fa fa-wrench"></i> Text Summarization</span></a>
+        <a href="#home" class="w3-bar-item w3-button  w3-hover-light-blue"><span class="home__title-color" ><i class="fa fa-wrench"></i> Topic Modeling</span></a>
+        <a href="#work" class="w3-bar-item w3-button  w3-hover-light-blue"></i><span class="home__title-color" ><i class="fa fa-wrench"></i> Sentiment Analysis</span></a>
+        <a href="#about" class="w3-bar-item w3-button  w3-hover-light-blue"></i><span class="home__title-color" ><i class="fa fa-bar-chart "></i> Reports</span></a>
+        <div class="w3-dropdown-hover w3-hide-small">
+          <button class="w3-button w3-padding-x-large w3-hover-light-blue" title="Profile"><span class="home__title-color"><i class="fa fa-user"></i> Profile</span></button>     
+          <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+            <a href="#" class="w3-bar-item w3-button w3-hover-opacity w3-hover-light-blue"><i class="fa fa-thumbs-up"></i> Feed</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-opacity w3-hover-light-blue"><i class="fa fa-database"></i> Repository</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-opacity w3-hover-light-blue"><i class="fa fa-cogs"></i> Settings</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-opacity w3-hover-light-blue"><i class="fa fa-sign-out"></i> Logout</a>
+          </div>
+        </div>
+        <a href="#" class="w3-bar-item w3-button w3-white w3-hover-white"><span style="color: white;">.</span></a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    </div>
+    
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">×</a>
+      <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">Text Summarization</a>
+      <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">Topic Modelling</a>
+      <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">Sentiment Analysis</a>
+      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">Reports</a>
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Profile</a>
+    </nav>
+      
+               
+        
+            <!--===== search =====-->
+           <div><br><br><br></div>       
+            <div class="w3-row-padding w3-center w3-margin-top" style="margin-left: 220px; width: 950px;">                 
+                  <div class="w3-container w3-white" style="height: fit-content; width: fit-content; margin-left: 200px;">
+                    <div class="card" style="width: 500px; height: 600px;">
+                          <div class="header" style="height: 180px;">
+                              <div class="main" style="height: 180px;">
+                                  <div class="image">
+                                      
+                                  </div>
+                                  <h3 class="name">Yusra</h3>
+                              </div>
+                              
+                          </div>
+                          <div class="content">
+                              <div class="left">
+                                  <div class="about-container"  ><h3><a href="#" style="margin-left: 190px; "><i class="fa fa-edit"></i></a></h3><br>
+                                      <h3 class="aboutme" style="margin-right: 100px;">Student</h3>
+                                      <p class="bio">BS Computer Science</p>
+                                  </div>
+                                  <br><br>
+                                  <div class="buttons-wrap">
+                                    <div class="follow-wrap">
+                                        <a href="#" class="follow" onclick="openForm2()" style="border: none;"><i class="fa fa-edit"></i> Edit Info</a>
+                                    </div>
+                                    <div class="share-wrap">
+                                        <a href="#" class="share" onclick="openForm()"> <i class="fa fa-edit"></i> Edit Password</a>
+                                    </div>
+                                </div>
+                                
+                              </div>
+                              
+                              <div class="right">
+                                  <div>
+                                      <br>
+                                      <h3 class="number">0</h3>
+                                      <h3 class="number-title">Files</h3>
+                                  </div>
+                                  <div>
+                                      <h3 class="number">0</h3>
+                                      <h3 class="number-title">Followers</h3>
+                                  </div>
+                                  
+                              </div>
+                              
+                          </div>
+                          <form method="POST" action="profile-picture" enctype="multipart/form-data">
+                            <label><b>Profile Picture:</b></label><br>
+                            <input type="file" name="profile" id="fileToUpload" />
+                            <input type="submit" value="Submit" name="submit" />
+                          </form>
+                      </div>
+                    </div>
+                    </section><br>
+                  </div>
+                 </div>
+            </div>
+            <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                  <h2 class="home__title-color">Change Password</h2>
+              <br>
+                  <label for="username"><b  class="home__title-color">Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" required>
+
+                  <label for="username"><b  class="home__title-color">Old Password</b></label>
+                  <input type="text" placeholder="Enter old Password " name="psw" required>
+              
+                  <label for="psw"><b  class="home__title-color">Password</b></label>
+                  <input type="password"  placeholder="Enter new Password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                  <button type="button" class="button info" onclick="closeForm()" >Save</button>
+                  <button type="button" class="button info" onclick="closeForm()" >Close</button>
+                </form>
+              </div>
+              <div class="form-popup" id="myForm2">
+                <form action="/action_page.php" class="form-container">
+                  <h2 class="home__title-color">Edit Info</h2>
+              <br>
+                  <label for="username"><b  class="home__title-color">Firstname</b></label>
+                  <input type="text" placeholder="Enter Firstname" name="fname" required>
+                  <label for="username"><b  class="home__title-color">Lastname</b></label>
+                  <input type="text" placeholder="Enter Lastname" name="lname" required>
+              
+                  <label for="designation"><b  class="home__title-color">Designation</b></label>
+                  <input type="text" placeholder="Your designation.." name="designation" required>
+                  <label for="about"><b  class="home__title-color">About</b></label>
+                  <input type="text" placeholder="About yourself.." name="about" required>
+                  
+                  <button type="button" class="button info" onclick="closeForm2()" >Save</button>
+                  <button type="button" class="button info" onclick="closeForm2()" >Close</button>
+                </form>
+              </div>
+              
+              <script>
+              function openForm() {
+                document.getElementById("myForm").style.display = "block";
+              }
+              function openForm2() {
+                document.getElementById("myForm2").style.display = "block";
+              }
+              
+              function closeForm() {
+                document.getElementById("myForm").style.display = "none";
+              }
+              function closeForm2() {
+                document.getElementById("myForm2").style.display = "none";
+              }
+              </script>
+              
+
+
+</body>
+</html>
+              
+                

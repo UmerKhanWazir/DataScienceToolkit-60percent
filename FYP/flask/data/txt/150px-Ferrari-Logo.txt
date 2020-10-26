@@ -1,0 +1,102 @@
+— - ml > — J ,
+weran = ary @tree_exp.open_tree(parent.rif, false) “era = 4 bs seaphtiheeahctina
+Te |] arcadia 855 opened = to_open==parent.rif || opened Sa tn dtt ema TT)
++ Ber ans rh @last_open_node=parent.rif ey ene aa pope snig
+Cees 857 Dalal chat Sn psec
+Th Lh) ide ease
++t bees Pht) etree_exp.close_tree(to_open) if to_open && !@opened POT ePr Peed
+Pett PY] @tree_exp,see(_node. rif) *@ initialize . £ po en ,
++ Ber ery cass Lh) abated *@ initialize_tree a ConsoleApplication cpp
+Rete 862 @tree_exp, selectcommand(_proc) CT Bolas)
+nen 863 @selecting_node = false Pant rarer ee
++ Breet 1S i #® show
+Tree Pty @tree_exp,call_after_next_show_h_scroll(proc{Tk. update; @tree_exp.see(_node.rif)}) ee ae) Vr)
+bey La *@ update_row
+1+ Bite SSO CSCS uny 867 Le sui) yg Ya
++ Bre Ceti ts mee D) Aap isiz sic
+1+ eee) 869 A #@ accept_complete_code ry)
+CRP eR ty 870 node=@ss.deep_node_by_line(@ss.root, _line) #@ add_buffer_menu_iten
+eee tT 871 if _node && @tree_exp.exist?(_node.rif) && _node.rifl='root' Oey =
++ Bee Cred shure_select_node(_node) *@ bookmark_clear
+Ba & ae-subprocess-inspector 873 end *@ bookmark_move 04
+hore ie pd cet Mt a
+LB Ren eric teic init) Ln *@ bookmark_prev oY y a
+Bild A) SL Sua)
+Renee 877 «def initialize _tree(_frame) Pena PP
+BG Stest Arh) —tree_goto = proc{|_self| ed ko Sula Tee OED
+had 879 sync_val = @bar.syne a UA eee P
+1 Reem Ett) @bar.sync=false ee ee ee Set ed
+L ee) +) begin Cems etc ed
+en eer = Rik) ® line = self celection veto) + Py eT =
+a . — : ma | St pose
+a-contracts.rb a Arcadia 12191240 dying at 2012-11-18 17:19:29 +0100
+Poo Oca) from /home/antonio/.local_antonio/work/gits/arcadia/lib/a-core.rb:403:in ‘ext_load’
+RUS e Te from shome/antonio/. local _antonio/work/gits/arcadia/lib/a-core.rb:330:in “block in do_build’ a
+a-commons .rb from /home/antonio/ Nio/work/ /ar ia/lib/a-core.r 7:in ‘each’
+a-core.rb bit) Aa /antonio/. Nio/work/ far EVA /a-core.rb:327:in ‘do_build’
+Se ey oa from /home/antonio/.lo Ntonio/work/gits/ar ia/lib/a-core.rb: :in ‘prepare’
+a Aaa raat /antonio/. Ntonio/work/ ele ia/lib/a- rere se ee ase ee. i
+wire ali Atta Peake ab eee Ol Nntonio/work/gits/ar /bin/arcadia:15:in ‘new’
+ee from /home/antonio/.local antonio/work/gits/arcadia/bin/arcadia:15:in eo Pi
+Reeeege ee ~atter-startup.cont a End running /home/antonio/.local antonio/work/gits/arcadia/bin/arcadia:
+SO ERO OM CRO CM OMS Mc Mc Mc cmc Mc OM Mc Mc cMc cM cc: : ns one
+O72A:0110 podem pander lpn pendpocfpndhendbs deo dhe staGOuwes dicey an aS
+OOM SS Mc Rc Mo Mc cM cmc Mc Momo Moc M cc: ok: - nn ; im 2.
+See BRo RE EE Ee EE te ne eeeeenennnnnnnea bleh celia te a)
+RR RR ccc Mc Mo Moc Mcc Moc) ‘Batch Calibration.exe’ (Win32): Loaded ‘C:\Windows\SyswOW64\ntell eS il) la) ds ee
+RS SR RS Mc ooo) AS So) “Batch Calibration.exe' (Win32): Loaded ° SE
+pope bdo = “Batch Calibration.exe’ (Win32): Loaded °
+e 0
+a
+- Cannot find or open the PDB file.
+eo |) ed) ee |
+“Batch Calibration.exe' (Win32): Loaded ° 1
+“Batch Calibration.exe’ (Win32): Loaded ‘Cc
+YNANnA
+STO
+s\Syswo
+nore Ss
+= 7 PR eo ae) a) a ee ee
+PAN Gale er nT sWOWG64\msvcr12@d.dll’. Cannot find or open the PDB file.
+Application “\??\C:\WINDOWS\system32\cmd.exe" found in tots)
+The program *[7676] Batch Calibration.exe’ has exited with code @ (@x@).
+a ac
+rig Os
+rg p= ey
+soundManager .onload = function(){
+}
+function init(gam_id, ears
+a StH
+PU eas sees © eC ees) Oe ee »:
+}
+bie C UD
+init(,
+| Bae Senay
+GB 2e-output
+[Eee
+Oey
+FT $(‘piece_‘+i+"_*
+if (color=="black’ && piece
+se eS CeCe
+else if (color=='white
+Rie Sa
+[ot <a Re eet Oe rer iarg
+Ste Sc Carte Poo Popes cecrsetresaced
+Pte eres
+iy ae fates
+Bs
+»
+Baie 0 ae | Bese Seay
+asters)
+tr (piece.id.indexOf(*_*)+));
+substr (square. id. indexOf(*_*)+');
+-
+var piece_id = piece.id.subs
+ris id = square.id.
+Initialize
+Sensor
+Initialize
+alarm
+nat
+Ne ke aad A
+ela Seal sais al

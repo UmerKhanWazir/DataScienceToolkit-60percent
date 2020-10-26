@@ -1,0 +1,221 @@
+
+
+
+Introduction
+As we know, compiler is a program that converts high-level language to assembly language. A compiler translates the code written in one language to some other language without changing the meaning of the program. Compiler design principles provide an in-depth view of translation and optimization process. Compiler design covers basic translation mechanism and error detection & recovery. It includes lexical, syntax, and semantic analysis as front end, and code generation and optimization as back-end.
+So, the compiler we designed is basically created on python where a Pascal code is translated into three-address code (TAC)
+
+
+Compiler’s Structure
+It consists of three major parts which are:
+Lexical Analyzer(Scanner)
+Syntactic and semantic analyzer
+Code Generation
+
+
+
+ Programming Language used
+We have used Pascal code to create our compiler as it is a very readable programming language. We can format your source code so that it reflects the flow of the program, and can use proper upper and lower case identifiers for variables and functions/procedures/methods.
+Code body
+There are certain things which must be used exactly in that way to compile your code on this mini compiler.
+Declaration
+“program example(input, output);
+var i,j : integer;”
+code is declared by var and by assigning other variables.
+Function
+If your code contains a function, then it must be written as
+function mult(x:integer; y:integer):integer;
+begin
+	mult := x * y
+end;
+Procedure
+If it contains a procedure, then it’s body must be like 
+procedure toScreen(x:integer);
+var y: integer;
+begin
+	y := x;
+	writeln(y)
+end;
+
+Code block
+Code must start with the “begin” keyword and will end with the “end”.  A code may have conditional statements or sometimes a loop.
+Conditional statements
+begin
+        i := 1;
+        j := -1;
+
+        if (i > 0) then
+          i := (1 - j*3)
+        else 
+           i := i + 1;
+	  writeln(i)
+end.
+
+Loop statements 
+while (i<10) do begin
+	j := (i +  j);
+	i := i + 1
+end;
+
+Working
+Scanning
+Every input is read word by word by the compiler and later group these words by tokens.
+Semantic Analysis
+Whenever an ID or a NUMBER is found, it checks that whether that input already exists or not. If not, then it simply adds its value in the table. Other than that with every assignment statement, there must be a variable or expression. If it doesn’t find any, it throws an error.
+
+
+Code Generation
+In this compiler code generation occurs whenever a variable, expression, function or a function call is parsed.
+
+
+
+When Error
+As, compiler reads one input at a time. Inputs are matched with the regular expressions. If, a certain input doesn’t match the regular expression, it will report an error.
+
+        # To track error depth - we do not want to recover from sibling or
+        # parent's functions.
+        global depth
+
+        # If we encounter an illegal symbol, skip passed it and report.
+        if self.__getTokenCode() == 'tc_ERROR':
+            message = 'Illegal character'
+            while self.__getTokenCode() == 'tc_ERROR':
+                self.__addError(self.__currentToken,message)
+                self.__getToken()
+
+        # If we know there is an error, check depth and exit if depth is the same
+        # or greater. Recover if error depth is smaller.
+        if self.__foundError:
+            if self.__errorDepth < depth:
+                if self.__getTokenCode() in syncsets[self.__errorInFunction]:
+                    if self.printTree: print '\t','    '*depth,'--->Skipping', self.__getTokenCode(), 'because of the Error flag.'
+                    return
+            else:
+                #if self.printTree: print '\t','    '*depth,self.__errorInFunction, syncsets[self.__errorInFunction]
+                self.__recover()
+                self.__getToken()
+                return
+
+
+
+
+
+
+
+
+
+
+
+Compiler’s Structure
+
+Identifiers
+
+
+
+Procedure Statements
+
+
+Simple Expressions
+
+def __SimpleExpression(self,input=None):
+        uminus = False
+        if self.__currentToken.TokenCode == 'tc_ADDOP':
+            op = self.__currentToken.DataValue[1]
+            if op == 'op_MINUS':
+                uminus = True
+            self.__match('tc_ADDOP')
+        entry = self.__Term()
+        entry = self.__SimpleExpressionAddop(entry)
+        if uminus:
+
+            ################################ CODE GEN ################################
+            temp = self.__newTemp()
+            self.__code.generate('cd_UMINUS',self.SymbolTable.SymbolTable[entry].m_lexeme,None,self.SymbolTable.SymbolTable[temp].m_lexeme)
+            entry = temp
+            ##########################################################################
+
+        return entry
+
+
+
+
+
+Program Definition
+
+def __ProgramDefinition(self,input=None):
+        self.__match('tc_PROGRAM')
+        pointer = self.__currentToken.getSymTabEntry()
+        name = self.SymbolTable.SymbolTable[pointer].m_lexeme
+        self.__match('tc_ID')
+        self.__match('tc_LPAREN')
+        self.__IdentifierList()
+        self.__match('tc_RPAREN')
+        return name
+
+
+Variable Definition
+
+ @trackDepth
+    def __IdentifierList(self,input=None):
+        lexeme = self.SymbolTable.SymbolTable[self.__currentToken.getSymTabEntry()].m_lexeme
+        self.__tempList.append(lexeme)
+        self.__match('tc_ID')
+        
+        if self.__currentToken.TokenCode == 'tc_COMMA': self.__IdentifierListRest()
+
+    @trackDepth
+    def __IdentifierListRest(self,input=None):
+        self.__match('tc_COMMA')
+        self.__IdentifierList()
+
+    @trackDepth
+    def __IdentifierListAndType(self,input=None):
+        self.__IdentifierList()
+        self.__match('tc_COLON')
+        self.__Type()
+
+
+
+
+Compiler’s parsing Order
+It parses the following in order
+Program definition
+Variable declaration
+Function or Procedures declaration
+Main program must start with “begin” and terminate with “end.”
+Compiler’s Execution
+After executing, it will show you the Three Address Code(TAC) and symbol table.
+
+
+
+Code Input
+
+
+
+
+
+
+
+
+
+
+
+
+Three Address Code
+
+
+
+
+
+
+
+
+
+Symbol Table
+
+
+
+Conclusion
+Our mini compiler covers all the major components of a compiler that are lexical analyzer, parser, semantic analyzer and code generation. It defines some basic possibilities that how a compiler might work for a high level language. It is a great way to reduce system load, improve performance and productivity.
+
+

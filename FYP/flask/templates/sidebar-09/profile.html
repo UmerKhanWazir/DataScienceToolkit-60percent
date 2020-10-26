@@ -1,0 +1,54 @@
+{% extends "./sidebar-09/home.html" %}
+{% block content %}       
+    <div class="w3-row-padding w3-center w3-margin-top" style="margin-left: 220px;">
+      <div class="w3-third">
+        <div class="w3-card w3-container" style="background-color:rgb(239, 243, 247); min-height:460px; width: 900px; height:max-content;">
+     <br>     
+    <div
+    class="img bg-wrap text-center py-4"
+    style="background-image: url(/static/sidebar/images/{{c}});"
+  >
+    <div class="user-logo">
+      <div
+        class="img"
+        style="background-image: url(/static/sidebar/images/{{p}});"
+      ></div>
+      <h3>{{n}}</h3>
+    </div>
+  </div>
+  <h3 class="home__title-color">Change Profile Picture:</h3>
+<br />
+
+<form method="POST" action="profile-picture" enctype="multipart/form-data">
+  <input type="file" style="color: transparent; width:150px;"  name="profile" id="fileUpload" />
+  <input type="submit" value="Submit" name="submit" class="button info w3-hover-blue"/>
+</form>
+<br />
+<h3 class="home__title-color">Change Cover Picture:</h3>
+<br />
+<form method="POST" action="cover" enctype="multipart/form-data">
+  <input type="file" style="color: transparent; width:150px;" name="cover" id="fileUpload" /></input>
+  <input type="submit"  value="Submit" name="submit" class="button info w3-hover-blue" ></input>
+</form>
+<br />
+<br />
+<h3 class="home__title-color">Account Recovery Email:</h3>
+<br />
+<span class="label-input100">Recovery Email : <b>{{r}}</b></span>
+<br />
+<form action="/recovery-email" method="POST">
+  <span class="label-input100"
+    >Enter your recovery Email (in case you lose password)</span
+  >
+  <input type="email" id="email" name="email" />
+  <input type="submit" class="button info w3-hover-blue"/>
+</form>
+<br><br>
+</div>
+<br><br>
+</div>
+</div>
+
+{% endblock %}
+              
+                

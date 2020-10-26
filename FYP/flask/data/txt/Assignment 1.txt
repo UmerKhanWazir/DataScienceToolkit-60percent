@@ -1,0 +1,22 @@
+Assignment 1
+ProperCase:
+Convert document into propercase.
+
+
+
+
+
+
+
+Sentiment Analysis
+Gives result if uploaded document have positive or negative text. Give polarity of document.
+
+
+
+
+
+
+
+
+Text Summarization
+Results provides summary of uploaded document paragraph in one like.

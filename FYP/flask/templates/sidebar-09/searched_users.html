@@ -1,0 +1,23 @@
+{% extends "./sidebar-09/home.html" %}
+{% block content %} 
+    <div class="w3-row-padding w3-center w3-margin-top" style="margin-left: 220px;">
+      <div class="w3-third">
+        <div class="w3-card w3-container" style="background-color:rgb(239, 243, 247); min-height:500px; width: 900px; height:max-content;">
+          <h3 style=" color:#4070F4">Similar Profiles.. </h3><br> 
+          <br>
+          {% for item in searched %}
+          <div class="w3-card" style="width:250px; height: 200px;  margin-left: 310px;"> 
+            <br>
+            <tr>
+                <img height="125" width="125" style="border-radius: 50%;" src="/static/sidebar/images/{{item[5]}}">
+                <br>
+                <td><a href="/{{item[2]}}">{{item[1]}}</a></td><br><br>
+            </tr>
+            </div><br><br>
+        {% endfor %}
+           
+          </div>
+        
+    </div>
+    </div>
+{% endblock %}

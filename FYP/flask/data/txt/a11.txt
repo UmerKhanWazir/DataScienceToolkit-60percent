@@ -1,0 +1,28 @@
+D
+-Answer 11-
+dataset = pd.read_csv(*googleplaystore.csv")
+data = dataset.values
+data = np.array(data)
+data = data[np.where(date[:,1] sANE”)]
+data = data[np.where(date[:,8]
+print (data)
+Everyone"),@]
+ombie Catchers’ "Magic Tiles 3° ‘Jewels Star: OZ adventure’
+“Dream League Soccer 2018’ ‘Sweet Fruit Candy’ ‘Fruits Bomb’
+"angry Birds Classic’ ‘Talking Tom Gold Run’ ‘My Talking Tom’
+“Hill Climb Racing’ ‘Pixel art: Color by Number Game"
+"Shoot Bubble - Fruit Splash’ ‘Doodle Jump’ ‘Helix Jump’ ‘Crossy Road"
+“Temple Run 2° ‘slither.io' ‘Talking Tom Gold Run’ ‘Zombie Catchers’
+“Miraculous Ladybug & Cat Noir - The Official Game’ ‘Dude Perfect 2°
+‘Alto’s Adventure” "CATS: Crash Arena Turbo Stars’
+“Strawberry Shortcake BerryRush’ "Extreme Match’ ‘Agar.io’ ‘diep.io*
+“BEVBLADE BURST app’ "DC Super Hero Girls™’ "Quiz: Logo game”
+“Candy Crush Saga” "Block Puzzle’ "Helix Jump’ ‘8 Ball Pool’
+“Jewels Legend - Match 3 Puzzle’ "Bubble Shooter’ ‘Solitaire’
+“Bubble Shooter Genies’ "Blossom Blast Sage’ ‘Traffic Racer’
+“Hill Climb Racing’ "Bubble Shooter 2° "Candy Bomb’ ‘Flow Free’
+“Zombie Catchers’ "Angry Birds Rio" ‘Candy Crush Jelly Saga’
+“Cut the Rope FULL FREE’ ‘Jewels Star: OZ adventure’
+“Power Pop Bubbles’ ‘Angry Birds Classic’
+“Best Fiends - Free Puzzle Game’ "Hill Climb Racing 2°
+“Fruit Block - Puzzle Legend’

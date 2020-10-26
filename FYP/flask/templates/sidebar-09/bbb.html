@@ -1,0 +1,33 @@
+{% extends "./sidebar-09/index.html" %} {% block content %}
+<div
+  class="img bg-wrap text-center py-4"
+  style="background-image: url(/static/sidebar/images/{{c}});"
+>
+  <div class="user-logo">
+    <div
+      class="img"
+      style="background-image: url(/static/sidebar/images/{{p}});"
+    ></div>
+    <h3>{{n}}</h3>
+  </div>
+</div>
+{% endblock %} {% block body %}
+
+<textarea
+  placeholder="Type something, web scraping or upload file..."
+  cols="132"
+  rows="20"
+>
+{{ page }}</textarea>
+
+<form method="POST" action="summary" enctype="multipart/form-data">
+  <label for="sentences">Enter number of sentences</label>
+  <input
+    placeholder=""
+    type="number"
+    name="sentences"
+    id="sentences"
+  />
+  <input type="submit" value="Submit" name="submit" />
+</form>
+{% endblock %}

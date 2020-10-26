@@ -1,0 +1,63 @@
+{% extends "./sidebar-09/home.html" %}
+{% block content %}    
+    <div class="w3-row-padding w3-center w3-margin-top" style="margin-left: 220px;">
+      <div class="w3-third">
+        <div class="w3-card w3-container" style="background-color:rgb(239, 243, 247); min-height:460px; width: 900px; height:max-content;">
+     <br>     
+    <div
+    class="img bg-wrap text-center py-4"
+    style="background-image: url(/static/sidebar/images/{{u[6]}});"
+  >
+    <div class="user-logo">
+      <div
+        class="img"
+        style="background-image: url(/static/sidebar/images/{{u[5]}});"
+      ></div>
+      <h3>{{u[1]}}</h3>
+    </div>
+  </div>
+  <br />
+  <button id="Button" type="button" class="button info">Follow Me!</button>
+ 
+  <script type="text/javascript">
+    document.getElementById("Button").onclick = function () {
+      location.href = "/follow/{{u[0]}}";
+    };
+
+  </script>
+  <br />
+  <br />
+  <script>check = false;</script>
+  {% for item in path %}
+  
+  <tr>
+    <td><a href="/view-file/{{item[0]}}">{{item[0]}}</a></td>
+    <br />
+    <script>check=true;</script>
+  </tr>
+  {% endfor %}
+  <br />
+  <br />
+  <div style="margin-left:320px;" >
+  <button id="myButton" type="button" class="button info"  >
+    Click to Save Repository
+  </button><br>
+</div>
+</div>
+</div>
+</div> 
+  <script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+      location.href = "/save-to-repository/{{u[0]}}";
+    };
+    if (check == true){
+      document.getElementById("myButton").style.display="block";
+    }
+    else{
+      document.getElementById("myButton").style.display="none";
+    }
+  </script>
+  
+{% endblock %}
+              
+                

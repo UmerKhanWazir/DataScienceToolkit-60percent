@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">\
+        <link
+      rel="stylesheet"
+      href="./static/styles.css"
+    />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Cinzel+Decorative:wght@900&family=Fascinate&display=swap" rel="stylesheet">
+
+        <!-- =====BOX ICONS===== -->
+        <title>Data Science Toolkit</title>
+    </head>
+
+    <body>
+        <!-- Navbar (sit on top) -->
+        <header class="l-header">
+          <div class="header"> </div>
+        </header>
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card " id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-wide "><span class="logo" style="font-family: 'Cinzel Decorative', cursive;" >DATA SCIENCE TOOLKIT</span></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="/" class="w3-bar-item w3-button w3-hover-light-blue"><i class="fa fa-home"></i><span class="home__title-color" > HOME</span></a>
+      <a href="/login" class="w3-bar-item w3-button  w3-hover-light-blue"><i class="fa fa-user"></i><span class="home__title-color" > LOGIN</span></a>
+      <a href="#work" class="w3-bar-item w3-button  w3-hover-light-blue"><i class="fa fa-question"></i><span class="home__title-color" > WORKS</span></a>
+      <a href="#about" class="w3-bar-item w3-button  w3-hover-light-blue"><i class="fa fa-circle"></i><span class="home__title-color" > ABOUT</span></a>
+       <a href="#pricing" class="w3-bar-item w3-button  w3-hover-light-blue"><i class="fa fa-envelope"></i><span class="home__title-color" > CONTACT</span></a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue w3-large w3-padding-16"> ×</a>
+  <a href="/"  class="w3-bar-item w3-button w3-hover-light-blue">HOME</a>
+  <a href="/login" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue">LOGIN</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue">WORKS</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue">ABOUT</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue">CONTACT</a>
+</nav>
+
+
+
+
+  
+            <!--===== HOME =====-->
+        <div class=" w3-container w3-animate-top  w3-padding-64 w3-margin-top" style="margin-left: 100px;">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>Welcome to<span class="home__title-color"> Data <br> Science Toolkit  <i class="fa fa-cogs fa-spin"></i></span> </h1>
+                    <p><a href="/signup" class="w3-button w3-blue w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off w3-hover-black">Sign Up and start today</a></p>
+                </div> 
+                <div class="w3-display w3-text-grey w3-large" style="padding:24px 48px">
+                    <i class="fa fa-github fa-2x w3-hover-opacity" style="color:black"></i>
+                    <i class="fa fa-google fa-2x w3-hover-opacity" style="color:black"></i>
+                </div>
+      </div>
+
+        <!------About Section-------->
+        
+        <section >
+        <div class="w3-container" style="padding:128px 16px; font-family:'Poppins', sans-serif;" id="about">
+          <h1 class="workcss"> About <span class="home__title-color">Data Science Toolkit</span></h1>
+          <h2 class="w3-center w3-xx-large"><span class="headings">Key features of our Website</span></h2>
+        </div>
+      </section> 
+    
+      <section>
+        <!-- First Grid -->
+      <div class="w3-row-padding w3-padding-64 w3-container w3-animate-right" style="background-color: rgb(240, 237, 237);">
+        <div class="w3-content">
+          <div class="w3-twothird">
+            <h1 class="home__title-color">Sentiment Analysis</h1>
+            <h5 class="w3-padding-32">This tools analyzes your documents, web pages and texts to detect the sentiments like joy, fear, sadness, anger, analytical, confident and tentative tones.</h5>
+          </div>
+      </div>
+      <div class="w3-third w3-center ">
+        <div style="margin-left: 200px;" >
+          <div style="font-size:128px; color:#258aee" id="div1" class="fa"></div>
+      </div>
+      </div>
+      </div>
+      <!-- Second Grid -->
+      <div class="w3-row-padding w3-padding-64 w3-container w3-animate-left" >
+        <div class="w3-content">
+          <div class="w3-third w3-center">
+            <i class=" w3-padding-64 w3-text-red w3-margin-right"></i>
+          </div>
+          <div class="w3-twothird">
+            <h1 class="home__title-color">Text Summarization</h1>
+            <h5 class="w3-padding-32">This tool identifies and summarizes the important ideas and facts of your documents, web pages, argumentative texts, your articles, your scientific texts, your history texts as well as your well-structured analyses work of art. </h5>
+          </div>
+        </div>
+      </div>
+      <!-- Third Grid -->
+      <div class="w3-row-padding w3-padding-64 w3-container w3-animate-right" style="background-color:rgb(240, 237, 237);;">
+        <div class="w3-content">
+          <div class="w3-twothird">
+            <h1 class="home__title-color">Topic Modelling</h1>
+            <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+          </div>
+      </div>
+      <div class="w3-third w3-center">
+        <div style="margin-left: 200px;" ><span style="font-size: 30px; color:#3399ff">
+        <i class="fa fa-spinner fa-spin fa-4x w3-padding-64 "></i></span>
+      </div>
+      </div>
+      </div>
+</section>
+          
+            <!-- Who can use Section -->
+            <div class="w3-container w3-center w3-opacity w3-padding-64" style="background: rgb(195, 210, 225);">
+          </div>
+<div class="column" style="padding:128px 16px; font-family:'Poppins', sans-serif;" id="about">
+  <h1 class="workcss">Who can use <span class="home__title-color"> Data Science<br>Toolkit?</span></h1>
+
+    <div class="w3-row-padding w3-center" style="margin-top:64px;">
+      <div class="w3-quarter">
+        <i class="fa fa w3-margin-bottom w3-jumbo w3-center"></i>
+        <p></p>
+    </div>
+
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card w3-white w3-hover-opacity w3-hover-blue" style="height: 180px; ">
+          <div class="w3-container">
+            <h3 class="headings"><i class="fa fa-bookmark"></i> Libraries</h3>
+            <p >Need to summarize your books' presentations ? Identify the arguments in a matter of seconds.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card w3-white w3-hover-opacity w3-hover-blue" style="height: 180px; ">
+        <div class="w3-container">
+            <h3 class="headings"><i class="fa fa-eye"></i> Readers</h3>
+            <p>Save time, summarize your digital documents for a relevant and fast uptake of information.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-row-padding w3-center" style="margin-top:64px">
+        <div class="w3-quarter">
+          <i class="fa fa w3-margin-bottom w3-jumbo w3-center"></i>
+          <p ></p>
+        </div>
+    </div>
+
+    <div class="w3-row-padding w3-center" style="margin-top:64px">
+      <div class="w3-quarter">
+        <i class="fa fa w3-margin-bottom w3-jumbo w3-center"></i>
+        <p></p>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card w3-white w3-hover-opacity w3-hover-blue" style="height: 180px;">
+        <div class="w3-container">
+            <h3 class="headings"><i class="fa fa-group"></i> College Students</h3>
+            <p>Summarize your Wikipedia pages in a matter of seconds for your productivity.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card w3-white w3-hover-opacity w3-hover-blue" style="height: 180px;">
+        <div class="w3-container">
+            <h3 class="headings"><i class="fa fa-book"></i> Professors</h3>
+            <p>Identify the most important ideas and arguments of your texts so that you can prepare your lessons.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-row-padding w3-center" style="margin-top:64px">
+        <div class="w3-quarter">
+          <i class="fa fa w3-margin-bottom w3-jumbo w3-center"></i>
+          <p></p>
+        </div>
+    </div>
+
+    <div class="w3-row-padding w3-center" style="margin-top:64px">
+      <div class="w3-quarter">
+        <i class="fa fa w3-margin-bottom w3-jumbo w3-center"></i>
+        <p></p>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card w3-white w3-hover-opacity w3-hover-blue" style="height: 180px; ">
+        <div class="w3-container">
+            <h3 class="headings"><i class="fa fa-pencil"></i> Journalists</h3>
+            <p> If you prefer simplified information that summarizes the major events, then Resoomer is for you !</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card  w3-white w3-hover-opacity w3-hover-blue" style="height: 180px;">
+        <div class="w3-container">
+            <h3 class="headings"><i class="fa fa-server"></i> Editors</h3>
+            <p>Identify and understand very fast the facts and the ideas of your texts that are part of the current news and events.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-row-padding w3-center" style="margin-top:64px">
+        <div class="w3-quarter">
+          <i class="fa fa w3-margin-bottom w3-jumbo w3-center"></i>
+          <p></p>
+        </div>
+    </div>
+  </div>
+<br><br><br>
+
+   <!--===== How it works Section =====-->
+   <div ><br><br>
+      <h1 class="home__title"> HOW IT<span class="home__title-color"> WORKS?</span></h1>
+      <h5 style="text-align: center; font-weight: 600; font-style: italic;">You can find out the sentiments, topics of your documents and texts and summarize them ,anytime you want :<br> • by copying and pasting them <br>
+        • or, by using our extensions to summarize your articles</5>
+    </div>
+  <br><br><br>
+       
+  
+            <!--===== CONTACT =====-->
+            <div class="w3-container w3-center w3-opacity " style="background: #5b7fe4;">
+            </div>
+             <section class="contact section" id="contact">
+                <h1 class="home__title">Contact</h1>
+                <div class="w3-container w3-padding-large">
+                    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px; height: 60px;">
+                      <div class="w3-third w3-dark-grey" style="height:80px">
+                        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey" ></i></p>
+                        <p>dstoolkit@email.com</p>
+                      </div>
+                      <div class="w3-third" style="background: #5b7fe4; height:80px;">
+                        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+                        <p style="color:white">Islamabad, Pakistan</p>
+                      </div>
+                      <div class="w3-third w3-dark-grey" style="height:80px">
+                        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+                        <p>0001113334</p>
+                      </div>
+                    </div>
+            </div>
+            <br>
+            <br>
+                <div class="contact__container bd-grid">
+                    <form action="" class="contact__form">
+                        <input type="name" placeholder="Name" class="contact__input">
+                        <input type="mail" placeholder="Email" class="contact__input">
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                      <button class="w3-button w3-blue w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off w3-hover-black">Send</button>
+                    </form>
+                </div>
+            </section>
+    </div>
+    </div>
+
+       <!-- Footer -->
+<footer class="w3-center w3-dark-grey w3-padding-64" >
+    <a href="/" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+      <i class="fa fa-google w3-hover-opacity"></i>
+      <i class="fa fa-github w3-hover-opacity"></i>
+      <h3>dstoolkit@gmail.com</h3>
+      </div>
+  </footer>
+       
+       
+<script>   
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+function smile() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "&#xf118;";
+  setTimeout(function () {
+      a.innerHTML = "&#xf11a;";
+    }, 1000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf119;";
+    }, 2000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf11a;";
+    }, 3000);
+}
+smile();
+setInterval(smile, 4000);
+</script>
+
+</body>
+</html>

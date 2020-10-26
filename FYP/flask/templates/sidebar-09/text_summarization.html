@@ -1,0 +1,75 @@
+{% extends "./sidebar-09/home.html" %}
+{% block content %} 
+            <!--===== url =====-->
+            <div class="w3-light-grey w3-padding-large w3-padding-16 " style="margin-left: 233px; width: 900px; height: max-content;" >
+              <h1 class=home__title-color style="font-size:35px; text-align: center;" >Text Summarization <i class="fa fa-wrench"></i></h1>
+              <form method="POST" action="web-scraping" enctype="multipart/form-data" style="margin-left: 20px;">
+                <label for="fname">Enter URL here:</label>
+                <input type="text" id="web-scraping" name="url" >
+                <input  type="submit" class="button info w3-hover-blue">
+            </form>
+            <br>
+              <div class="w3-container " style="width:800px; height: 460px; margin-right: 200px;">
+                    <button id="repo" style="display: inline-block;" class="button info"><i class="fa fa-upload"></i> Repository</button>
+                    <script type="text/javascript">
+                      document.getElementById("repo").onclick = function () {
+                        location.href = "/show-repository";
+                      };
+                    </script>
+              <form method="POST" action="/upload-file" enctype="multipart/form-data" style="float: right;">
+                <input type="file" name="fileToUpload" id="fileToUpload" style="color: transparent; width:150px; display: inline-block;" />
+                <input type="submit" value="Submit file for text-summarization" name="submit" class="button info w3-hover-blue" />
+              </form>  
+                
+           <div style="margin-left:600px;">
+                <button id="myButton" for="erase" class="contact__button" style="border: none;"><i class="fa fa-trash"></i></button>
+                <script type="text/javascript">
+                  document.getElementById("myButton").onclick = function () {
+                    location.href = "/clean";
+                  };
+                </script>
+             </div>   
+                <div>
+                    <form  method="POST" action="summary" enctype="multipart/form-data" class="inputtext" style=" font-style: normal;">
+                        <textarea placeholder="Copy/Paste text here..." cols="0" rows="10"  width="750px" height="350px" class="contact__input" name="summary" id="summary" >{{page}}</textarea>
+                        <div style="float: left; ">
+                          <button class="button info1" >Summarize</button>
+                        </div>
+                      </form >
+                      <form class="dropup" method="POST" action="/data-cleaning" style="margin-left:20px;" >
+                       
+                        <select name="cleaning" id="cleaning" class="dropbtn w3-white w3-hover-light-blue">
+                          <option value="upper">Upper Case</option>
+                          <option value="lower">Lower Case</option>
+                          <option value="proper">Proper Case</option>
+                          <option value="punctuation">Remove Punctuation</option>
+                          <option value="line">Remove Line Space</option>
+                        </select>
+                        <input type="submit" value="Submit" class="button info w3-hover-blue"  />
+                      </form>
+                </div>
+                    
+                </div>
+            </div>
+<script>
+              /* When the user clicks on the button, 
+              toggle between hiding and showing the dropdown content */
+              function myFunction() {
+                document.getElementById("myDropup").classList.toggle("show");
+              }
+              
+              // Close the dropdown if the user clicks outside of it
+              window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                  var dropup = document.getElementsByClassName("dropup-content");
+                  var i;
+                  for (i = 0; i < dropups.length; i++) {
+                    var openDropup = dropups[i];
+                    if (openDropup.classList.contains('show')) {
+                      openDropup.classList.remove('show');
+                    }
+                  }
+                }
+              }
+</script>
+{% endblock %}

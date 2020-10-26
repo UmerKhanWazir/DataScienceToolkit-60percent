@@ -1,0 +1,383 @@
+                             
+      COMSATS University Islamabad, 
+Park Road, Chak Shahzad, Islamabad Pakistan
+
+
+Software Requirements Specification
+For 
+Data Science Toolkit for Social Scientists
+(Web Application)
+Version 1.0
+
+By
+Umer Khan Wazir     CU/SP17-BCS-098/ISB
+Yusra Fatima             CU/SP17-BCS-063/ISB
+
+Supervisor
+Mr. Qasim Malik 
+
+
+Submission Date: 2nd March, 2020
+
+Original Version 1.0  
+
+
+
+
+Bachelor of Science in Computer Science (2017-2021)
+
+
+Table of Content 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Introduction
+This document provides brief overview for System specification requirements for the Data Science related system for Social Scientists. It contains document purpose, product scope, audience, definition and overall view of the product.
+Document Purpose
+This SRS document contains the software functional requirement and its non-functional requirement. It will provide a brief overview of use-case, which will provide ease of understanding of software for others. It contains performance and minimum requirements that are needed to run the application smoothly on smart-phone. Our application will be web-based, but this document will allow ease of importing it.
+Product Scope
+Extraction of useful information from detailed and complex data is time consuming as we are surrounded by a lot of data these days. Our system will help user solve this problem by getting required information in no time by creating user-friendly environment. This system is especially for Social Scientists, who are always looking for useful information to perform analysis on it and get benefits from it. User of application can create his account on website. After that user will be able to upload the document from which they want to extract information. After uploading the document, using OCR techniques we will convert document into editable form for users. User can now perform update or delete operation on document before applying Data Science Tools. User will be also provided data cleaning tools so that they can clean document before implementing data science tools. After processing the data, Data Science Toolkit will provide user many options like text summarization, topic modeling, sentiment analysis and many other to perform on uploaded document. Using toolkit, system will provide user summery of uploaded document, user can upload multiple documents and system will categorize documents, system can determine whether writer attitude towards particular topic, product etc. is positive, negative or neutral. System will provide user document summary, user can go to topics in document in which he/she is interested, user can search what this document is about and many more. System will provide user report of the tools applied on document. User can keep history of document, so he/she can access it any time. User can also maintain repository and share their content with other users. User have to create and manage his/her account before accessing Data Science Toolkit
+Intended Audience
+This document is intended for developers, users (social scientists) and testers.
+It will help developers to create and develop the FRs for the system. User can view use case as a guide to understand and learn the application. Testers can use the document to validate the FRs based on the dependencies on the software.
+Definitions, Acronyms and Abbreviations
+Following are the definitions, acronyms and abbreviations used:
+
+Table 1: Definitions, Acronyms and Abbreviations
+
+
+Overall Description
+This section of the SRS describes the product perspective and in which environment it will be deployed on. It also contains software assumption and dependencies that may help the developers in coding. It will also help testers to test the software based on those dependencies. This section user characteristics and general constraint on the system.
+Operating Environment
+The application will be web-based and it can run on computers, laptops and android phones. It supports windows, mac and android operating system. Internet connection is necessary to run this application because it is web application. This application can run on almost all the modern devices.
+General Constraints
+This is web application so internet connectivity is must to run it. It will run on windows 7 and greater versions. Application will not run on windows version less than 7. It also does not support older versions of mac and android.
+Requirement Elicitation Techniques.
+Following are the requirement elicitation Techniques:
+Brainstorming Session: For gathering and creating new ideas for the document.
+Document Analysis: To gather information for Functional Requirements and Non-functional Requirements.
+Use Cases.
+Following are the use cases:
+Module 1: User Profiling
+
+
+Module 2: Data Collection and Pre-Processing
+
+
+Module 3: Development and Integration of Data Science Tools
+
+
+Module 4: Report
+
+
+
+ Module 5: Data Repository Management and Sharing
+
+
+
+Use Case(s) Diagram:
+Following are the use case diagrams:
+
+
+Figure 1: Use case Diagram (1/2)
+
+
+Figure 2: Use case diagram (2/2)
+ Use Case(s):
+Use Case(s) (Tabular):
+	The tabular forms of use cases are given below:
+Module 1: User Management
+
+ UC 1.1: Sign In
+
+Sign Up
+
+
+
+
+Remember me
+
+
+Forgot password
+
+
+Change Password
+
+Add information
+Edit information
+
+View information
+Log out
+
+Module 2: Data Collection and Pre-Processing
+
+Upload Document
+
+Edit Document
+
+Delete Document
+
+View Cleaning tools
+
+
+
+
+
+Removal of extra spaces
+
+Convert Case
+
+Lowercase
+
+Uppercase
+
+Proper case
+
+Remove non-alphabetic characters
+
+
+Module 3: Development and Integration of Data science tools
+
+View Info
+
+Text Summarization
+
+Manual Summary
+
+Analyze 
+
+Automatic Summary
+
+Topic Modeling
+
+Sentiment Analysis
+
+
+Module 4: Report
+
+Save Report
+
+
+View Report
+
+Delete Report
+
+Delete Report
+
+Download Report
+
+
+
+
+
+Module 5: Data Repository Management and Sharing
+
+Store document in repository
+
+
+Download document
+
+Edit Document
+
+Share Document 
+
+
+5. Specific Requirements
+Following are the functional requirements of Data Science Toolkit for Social Scientists
+            FR 1: Email Address
+            FR 2: Password
+            FR 3: Log in button
+            FR 4: Gmail
+            FR 5: Password
+            FR 6: Confirm Password
+
+            FR 7: Email
+            FR 8: Sign up button
+            FR 9: Email verification
+FR 10: New Password
+FR 11: Confirm Password
+FR 12: Submit button
+FR 13: Remember user email
+
+FR 14: Remember Login Information
+FR 15: Sign in button
+FR 16: Old Password
+
+5.FR 17: New Password
+FR 18: Confirm Password
+FR 19: Submit button
+
+FR 20: Name
+FR 21: Profession
+FR 22: Abouts
+FR 23: Nationality
+FR 24: Date of Birth
+FR 25: Edit Nationality
+FR 26: Edit Name
+FR 27: Edit Date of birth
+FR 28: Edit Profession
+FR 29: Documents
+FR 30: Delete Shared Documents from Profile
+FR 31: View Documents
+
+FR 32: View Profile Picture
+FR 33: Log out
+FR 34: Confirm logout
+FR 35: Change Profile Picture
+FR 36: Search
+FR 37: View Profile
+FR 38: Select Profile
+FR 39: Search Button
+FR 40: Upload document
+FR 41: Upload PDF
+FR 42: Upload Scanned Images
+FR 43: Web Scrapping
+FR 44: Upload from epub
+FR 45: Upload from mobi
+FR 46: Upload from divu
+FR 47: Editable Document
+FR 48: Edit Text
+FR 49: Delete Text
+FR 50: Update Text
+FR 51: Data Cleaning Tools
+FR 52: Remove extra spaces
+FR 53: Uppercase
+FR 54: Lowercase
+FR 55: Proper case
+FR 56: Remove non-alphabetic characters
+FR 57: Data Science Toolkit
+FR 58: Select Document
+FR 59: Text Summarization
+FR 60: Automatic Sentence Size
+FR 61: Manual Sentence Size
+FR 62: Analyze document
+FR 63: Save Text Summarization Result
+FR 64: Download Text Summarization Result
+FR 65: Paste Text for Text Summarization
+FR 66: Select document for text summarization
+FR 67: Delete Text for Text Summarization
+FR 68: Topic Modeling
+FR 69: Topic Modeling Result button
+FR 70: Save Topic Modeling Result
+FR 71: Download Topic Modeling Result
+FR 72: Upload documents for Topic Modeling
+FR 73: Stemming and Lemmatization
+FR 74: Topics
+FR 75: Document Category
+FR 76: Sentiment Analysis
+FR 77: Edit Text for sentiment analysis
+FR 78: Paste Text for Sentiment Analysis
+FR 79: Upload document from computer for Sentiment Analysis
+FR 80: Select document from repository for Sentiment Analysis
+FR 81: Result Button for Sentiment Analysis
+FR 82: Graph of Sentiment Analysis
+FR 83: Download Sentiment Analysis Result
+
+FR 84: Save Sentiment Analysis Result
+FR 85: Editable form
+FR 86: Report
+FR 87: Open Report
+FR 88: Download Report
+
+FR 89: Repository and Sharing
+FR 90: Share Button
+FR 91: View document in Repository
+FR 92: Upload button in repository section
+FR 93: Feed
+FR 94: Upload button in feed
+
+Non-functional Requirements
+Following are the NFRs for the system.
+Performance Requirements
+The performance requirements of Data Science Toolkit for Social Scientists are as follows:
+Response Time
+The system would not be slow in most cases but due to some algorithms like topic modeling it may take some time for processing results but the System average response time will be 2ms and maximum would be 5 min.
+Throughput
+The system would be able to respond quickly in most cases by handling 1000 alerts per second.
+Capacity
+It will be able to accommodate more than ten thousand user data.
+Reliability
+Following is the reliability of the system.
+Availability
+System will be available 24/7.
+Mean Time Between Failures (MTBF) 
+The mean time between failures would be less than 6hours
+Mean Time to Repair (MTTR) 
+The mean time to repair would be Less than 6 hours
+Maximum Bugs or Defect Rate 
+The system will achieve such a standard in which it experiences 2 bugs per hundred of lines of code at maximum.
+
+Usability
+Application will confirm certain common International usability standards such as user interface design and usability assurance. Usability assurance standards provide guidelines and some requirements on how to prepare, run, and document usability tests to make sure that product is usable.
+
+Design Constraints
+Following are the design constraints of the system.
+Visual Studio Code
+The software tool would be used to develop the web application. Its latest version 16.4 will be used to make this application.
+Node.js/Flask
+This software tool would be used to develop the database of the system.
+Security
+System should have password encryption. The database will not allow an authorized user to modify the data and thus it will be hard to get into the system.
+
+
+
+Gantt chart
+
+
+Figure 3: Gantt chart
+Conclusion
+This document will help the developer and customer to understand the details of the application as a whole including all its requirements. The document will not only analyze the requirements but also the system.
+References
+
+Web links:
+
+
+
+Book links:
+
+Big Data Glossary A Guide to Public Data, First Edition, Pete Warden.
+
+https://www.amazon.com/Big-Data-Glossary-Guide-Generation/dp/1449314597
+
+Data Source Handbook A Guide to the New Generation of Data Tools, First edition, Pete Warden.
+
+https://www.amazon.com/Data-Source-Handbook-Guide-Public/dp/1449303145
+
+Plagiarism Report
+Following is the plagiarism report of the document:
+
+

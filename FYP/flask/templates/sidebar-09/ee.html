@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link
+      rel="stylesheet"
+      href="./static/home.css"
+    /> 
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='./sidebar/css/style.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='./sidebar/css/bootstrap.min.css')}}"
+    />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <link href='https://kit.fontawesome.com/a076d05399.js'>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Home</title>
+    </head>
+    <body>
+   
+      <!-- Navbar (sit on top) -->
+<div class="w3-top">
+<div class="w3-bar w3-white w3-card " id="myNavbar">
+  <a href="/home" class="w3-bar-item w3-button w3-wide w3-hover-white"><span class="home__title-color" style="font-size:large; font-family: 'Tangerine', serif;" >DATA SCIENCE TOOLKIT</span></a>
+  <!-- Right-sided navbar links -->
+  <div class="w3-right w3-hide-small">
+    <a href="/text-summarization" class="w3-bar-item w3-button w3-hover-light-blue"><span class="home__title-color" ><i class="fa fa-wrench"></i> Text Summarization</span></a>
+    <a href="#home" class="w3-bar-item w3-button  w3-hover-light-blue"><span class="home__title-color" ><i class="fa fa-wrench"></i> Topic Modeling</span></a>
+    <a href="#work" class="w3-bar-item w3-button  w3-hover-light-blue"></i><span class="home__title-color" ><i class="fa fa-wrench"></i> Sentiment Analysis</span></a>
+    <a href="#about" class="w3-bar-item w3-button  w3-hover-light-blue"></i><span class="home__title-color" ><i class="fa fa-bar-chart "></i> Reports</span></a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button id="profile" class="w3-button w3-padding-x-large w3-hover-light-blue" title="Profile"><span class="home__title-color"><i class="fa fa-user"></i> Profile</span></button>     
+      <script type="text/javascript">
+        document.getElementById("profile").onclick = function () {
+          location.href = "/profile";
+        };
+      </script>
+      
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+        <a href="/feed" class="w3-bar-item w3-button w3-hover-opacity w3-hover-light-blue"><i class="fa fa-thumbs-up"></i> Feed</a>
+        <a href="/repository" class="w3-bar-item w3-button w3-hover-opacity w3-hover-light-blue"><i class="fa fa-database"></i> Repository</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-opacity w3-hover-light-blue"><i class="fa fa-sign-out"></i> Logout</a>
+      </div>
+    </div>
+    <a href="#" class="w3-bar-item w3-button w3-white w3-hover-white"><span style="color: white;">.</span></a>
+  </div>
+  <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blues w3-large w3-padding-16">×</a>
+  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue">Text Summarization</a>
+  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue">Topic Modelling</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue">Sentiment Analysis</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue">Reports</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue">Profile</a>
+</nav>
+  
+           
+        <!-- Header -->
+        <header>
+  <br><br>
+  <form action="/users-search" method="POST">
+    <input
+      name="search"
+      class="form-control"
+      type="text"
+      placeholder="Search Users"
+      aria-label="Search"
+    />
+  </form>
+
+            <!--===== summary =====-->
+          
+            <section class="position">
+            <div class="row">
+                <h1 class="home__title" style="font-size: 35px; text-align:center; margin-right: 220px;"><span class="home__title-color">Text Summarization Result</span> </h1>
+                <div class="column s1" style="border-style:outset;">
+                  <h2 style="font-size:x-large;">Original URL/Text</h2>
+                  <textarea class="textarea">{{page}}</textarea>
+                  </div>
+                <div class="column s1" style="border-style:outset;">
+                  <h2 style="font-size:x-large;" >Summarized Text</h2>
+                  <textarea class="textarea">{{d}}. {{summ}}</textarea>
+                </div>
+            </div>
+        </section>
+        <div class="w3-center">
+          <form method="POST" action="summary" enctype="multipart/form-data">
+            <label style="font-size:17px;" for="sentences">Enter number of sentences</label>
+            <input
+              placeholder=""
+              type="number"
+              name="sentences"
+              id="sentences"
+            />
+            <input type="submit" value="Submit" name="submit" />
+          </form>
+            <button class="button info" style="margin-left: 40px;" >Save</button>
+            <button class="button info" style="margin-left: 10px;" >Download</button>
+        </div>
+        <br>
+
+
+</body>
+</html>
+  

@@ -1,0 +1,23 @@
+Final Year Project Idea
+Project Name:		Furniture Buy & Sell.
+Description:		
+Create Account.
+Create Account using Facebook, instagram etc.
+Change settings of account.
+Buy Products.
+Search Product in searchbar.
+Search Product through location.
+Display different furniture categories.
+Display recommended products.
+Notification will be send to user about recommended products.
+Sell Products.
+Add the product user wanted to sell.
+Chat Box.
+Confirm your deal with seller/buyer.
+Send messages, voice mail and call to users.
+View selling chat.
+View buying chat.
+View product using Augmented Reality
+Using augmented reality we can place a product in any location before buying it to get better idea of how product will look at that location. For example : we view a sofa in AR and place it at corner of room. Now we can clearly see how product will look in that room if we buy it.
+ 					OR
+Add Furniture designs in which user can view latest furniture designs and view 3d model of furniture in AR.	 	

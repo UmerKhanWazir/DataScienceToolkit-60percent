@@ -1,0 +1,31 @@
+dataset = pd.read_csv(*googleplaystore.csv")
+data = dataset.values
+data = np.array(data)
+data = data[np.where(date[:,9]
+print (data)
+‘art & Design’),@]
+[['Photo Editor & Candy Camera & Grid & ScrapBook'
+‘U Launcher Lite - FREE Live Cool Themes, Hide Apps’
+"Sketch - Draw & Paint’ ‘Paper flowers instructions’
+“smoke Effect Photo Maker - Smoke Editor’ ‘Infinite Painter’
+“Garden Coloring Book’ ‘Text on Photo - Fonteee’
+"Name Art Photo Editor - Focus n Filters’
+“Tattoo Name On My Photo Editor’ ‘Mandala Coloring Book’
+"3D Color Pixel by Number - Sandbox Art Coloring’
+‘Learn To Draw Kawaii Characters’
+“Photo Designer - Write your name with shapes’
+"35@ Diy Room Decor Ideas’ “FlipaClip - Cartoon animation"
+“ibis Paint X’ ‘Logo Maker - Small Business’
+"Boys Photo Editor - Six Pack & Men's Suit™
+“Superheroes Wallpapers | 4K Backgrounds’ "HD Mickey Minnie Wallpapers’
+‘Harley Quinn wallpapers HD’ ‘Animated Photo Editor’
+"Pencil Sketch Drawing’ ‘Easy Realistic Drawing Tutorial’
+"Pink Silver Bow Keyboard Theme’ ‘Art Drawing Ideas"
+“Anime Manga Coloring Book’ "Easy Origami Ideas’ "I Creative Idea’
+"How to draw Ladybug and Cat Noir’ ‘Floor Plan Creator’
+“PIP Camera - PIP Collage Maker’
+"How To Color Disney Princess - Coloring Pages’
+“Drawing Clothes Fashion Ideas’ ‘Sad Poetry Photo Frames 2618"
+°
+sing
+7

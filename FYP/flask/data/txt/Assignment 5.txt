@@ -1,0 +1,73 @@
+ASSIGNMENT # 0
+5
+ 
+(Compiler Construction)
+ 
+ 
+ 
+Submitted By:
+ 
+Muhammad Abdullah
+ 
+ 
+(SP17
+-
+BCS
+-
+025)
+ 
+Afaq Masood 
+ 
+ 
+ 
+(SP17
+-
+BCS
+-
+034)
+ 
+Yusra Fatima 
+ 
+ 
+ 
+(SP17
+-
+BCS
+-
+063)
+ 
+Umer Khan Wazir 
+ 
+ 
+ 
+(SP17
+-
+BCS
+-
+098)
+ 
+Abdul Mannan 
+ 
+ 
+ 
+(FA16
+-
+BCS
+-
+103)
+ 
+ 
+Submitted to:
+ 
+Mr. Salman Aslam
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
