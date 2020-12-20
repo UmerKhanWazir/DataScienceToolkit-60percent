@@ -1,54 +1,76 @@
 {% extends "./sidebar-09/home.html" %}
-{% block content %}       
-    <div class="w3-row-padding w3-center w3-margin-top" style="margin-left: 220px;">
-      <div class="w3-third">
-        <div class="w3-card w3-container" style="background-color:rgb(239, 243, 247); min-height:460px; width: 900px; height:max-content;">
-     <br>     
-    <div
-    class="img bg-wrap text-center py-4"
-    style="background-image: url(/static/sidebar/images/{{c}});"
-  >
-    <div class="user-logo">
-      <div
-        class="img"
-        style="background-image: url(/static/sidebar/images/{{p}});"
-      ></div>
-      <h3>{{n}}</h3>
+{% block content %}        
+    
+<br >
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-2" ></div>
+           
+          <div class="col-sm-8" style="background-color:rgb(239, 243, 247); border-radius: 1%;">
+            <div class="card text-center">
+     <br> 
+     <form id="form1" runat="server">
+        <div>
+         
+        <div class="coverpic" style="height: 300px;">
+        <img  src="/static/sidebar/images/{{c}}" style="height: 300px; width:800px; margin-left:40px ">
+      
+      </div>
+        <div class="profilepic" >
+        <img  src="/static/sidebar/images/{{p}}" style="width: 150px; height: 150px;   border-radius: 50%;" >
+      </div>
+      </div><br><br><br>
+      <h2>{{n}}</h2>
+    </form>
+    <br>
     </div>
-  </div>
-  <h3 class="home__title-color">Change Profile Picture:</h3>
+    <center>
+  <h3>Change Profile Picture:</h3>
 <br />
-
 <form method="POST" action="profile-picture" enctype="multipart/form-data">
-  <input type="file" style="color: transparent; width:150px;"  name="profile" id="fileUpload" />
-  <input type="submit" value="Submit" name="submit" class="button info w3-hover-blue"/>
-</form>
+  <div id="upload_button">
+      <label>
+        <input type="file" style="color: transparent; width:150px;" name="profile" id="fileUpload" />
+        <span class="btn btn-info" data-toggle="tooltip" title="Upload file from computer">Upload profile</span>
+        <input type="submit" value="Submit" name="submit" class="btn btn-danger"/>
+      </label>
+    </div>
+</form>  
+
 <br />
-<h3 class="home__title-color">Change Cover Picture:</h3>
+<h3>Change Cover Picture:</h3>
 <br />
 <form method="POST" action="cover" enctype="multipart/form-data">
-  <input type="file" style="color: transparent; width:150px;" name="cover" id="fileUpload" /></input>
-  <input type="submit"  value="Submit" name="submit" class="button info w3-hover-blue" ></input>
-</form>
+  <div id="upload_button">
+    <label>
+      <input type="file" style="color: transparent; width:150px;" name="cover" id="fileUpload" />
+      <span class="btn btn-info" data-toggle="tooltip" title="Upload file from computer">Upload profile</span>
+      <input type="submit" value="Submit" name="submit" class="btn btn-danger"/>
+    </label>
+  </div>
+</form>  
 <br />
 <br />
-<h3 class="home__title-color">Account Recovery Email:</h3>
-<br />
-<span class="label-input100">Recovery Email : <b>{{r}}</b></span>
-<br />
+<h3 class="home__title-color">Account Recovery Email:</h3><br>
+
+<span class="label-input100">Recovery Email : <b>{{r}}</b></span><br />
 <form action="/recovery-email" method="POST">
   <span class="label-input100"
     >Enter your recovery Email (in case you lose password)</span
   >
   <input type="email" id="email" name="email" />
-  <input type="submit" class="button info w3-hover-blue"/>
+  <input type="submit" class="btn btn-danger"/>
 </form>
 <br><br>
 </div>
 <br><br>
 </div>
-</div>
+    </div>
 
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+      </div>
+  <br>
 {% endblock %}
               
-                

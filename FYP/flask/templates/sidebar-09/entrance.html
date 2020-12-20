@@ -3,11 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">\
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link
-      rel="stylesheet"
-      href="./static/styles.css"
-    />
+        rel="stylesheet"
+        href="./static/styles.css"
+      />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -16,45 +19,44 @@
         <!-- =====BOX ICONS===== -->
         <title>Data Science Toolkit</title>
     </head>
-
+<style>
+  body{
+    background-color:rgb(216, 226, 240);
+  }
+  
+</style>
     <body>
         <!-- Navbar (sit on top) -->
-        <header class="l-header">
-          <div class="header"> </div>
-        </header>
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card " id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-wide "><span class="logo" style="font-family: 'Cinzel Decorative', cursive;" >DATA SCIENCE TOOLKIT</span></a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="/" class="w3-bar-item w3-button w3-hover-light-blue"><i class="fa fa-home"></i><span class="home__title-color" > HOME</span></a>
-      <a href="/login" class="w3-bar-item w3-button  w3-hover-light-blue"><i class="fa fa-user"></i><span class="home__title-color" > LOGIN</span></a>
-      <a href="#work" class="w3-bar-item w3-button  w3-hover-light-blue"><i class="fa fa-question"></i><span class="home__title-color" > WORKS</span></a>
-      <a href="#about" class="w3-bar-item w3-button  w3-hover-light-blue"><i class="fa fa-circle"></i><span class="home__title-color" > ABOUT</span></a>
-       <a href="#pricing" class="w3-bar-item w3-button  w3-hover-light-blue"><i class="fa fa-envelope"></i><span class="home__title-color" > CONTACT</span></a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue w3-large w3-padding-16"> ×</a>
-  <a href="/"  class="w3-bar-item w3-button w3-hover-light-blue">HOME</a>
-  <a href="/login" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue">LOGIN</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue">WORKS</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue">ABOUT</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue">CONTACT</a>
-</nav>
-
-
+        <nav class="navbar  navbar-default navbar-inverse" >
+          <div class="container-fluid">
+            <div class="navbar-header" >
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href="/" style="color: white; font-weight: bold;
+              text-shadow: 4px 4px 4px #aaa;">Data Science Toolkit</a>
+            </div>
+            <section style="float: right;">
+            <div class="collapse navbar-collapse" id="myNavbar" >
+              <ul class="nav navbar-nav" >
+                <li><a href="#about"style="color:white"><i class="fa fa-fw fa-info-circle"></i>About</a></li>
+                <li><a href="/login"style="color:white"><i class="fa fa-fw fa-user"></i> Login</a></li>
+                <li><a href="#works"style="color:white"><i class="fa fa-fw fa-question-circle"></i>Works</a></li>
+                <li><a href="#contact"style="color:white"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>   
+              </ul>
+              
+            </div>
+           </section>
+          </div>
+        </nav>
 
 
   
             <!--===== HOME =====-->
+            
+
         <div class=" w3-container w3-animate-top  w3-padding-64 w3-margin-top" style="margin-left: 100px;">
                 <div class="home__data">
                     <h1 class="home__title">Hi,<br>Welcome to<span class="home__title-color"> Data <br> Science Toolkit  <i class="fa fa-cogs fa-spin"></i></span> </h1>
@@ -64,11 +66,11 @@
                     <i class="fa fa-github fa-2x w3-hover-opacity" style="color:black"></i>
                     <i class="fa fa-google fa-2x w3-hover-opacity" style="color:black"></i>
                 </div>
-      </div>
-
+              </div>
+  
         <!------About Section-------->
         
-        <section >
+        <section id="about" >
         <div class="w3-container" style="padding:128px 16px; font-family:'Poppins', sans-serif;" id="about">
           <h1 class="workcss"> About <span class="home__title-color">Data Science Toolkit</span></h1>
           <h2 class="w3-center w3-xx-large"><span class="headings">Key features of our Website</span></h2>
@@ -212,7 +214,7 @@
 <br><br><br>
 
    <!--===== How it works Section =====-->
-   <div ><br><br>
+   <div id="works"><br><br>
       <h1 class="home__title"> HOW IT<span class="home__title-color"> WORKS?</span></h1>
       <h5 style="text-align: center; font-weight: 600; font-style: italic;">You can find out the sentiments, topics of your documents and texts and summarize them ,anytime you want :<br> • by copying and pasting them <br>
         • or, by using our extensions to summarize your articles</5>
@@ -221,7 +223,7 @@
        
   
             <!--===== CONTACT =====-->
-            <div class="w3-container w3-center w3-opacity " style="background: #5b7fe4;">
+            <div id="contact" class="w3-container w3-center w3-opacity " style="background: #5b7fe4;">
             </div>
              <section class="contact section" id="contact">
                 <h1 class="home__title">Contact</h1>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% include "./includes/message.html" %}
+    <h1>Original Text</h1>
+    <p>{{page}}</p>
+    <h1>Document Level Analysis</h1>
+    <div class="container-fluid">
+      <div class="row">
+            <div class="col-sm-4 mid">
+              <center> 
+              <img class="space" src="{{url_for('static', filename='Picture1.png')}}" alt="pic1">
+               <h4 class="bold">{{positive}}</h4></div>
+              </center>
+            <div class="col-sm-4 ">
+              <center>
+              <img class="space"src="{{url_for('static', filename='Picture2.png')}}" alt="pic2">
+               <h4 class="bold">{{neutral}}</h4></div>
+               <center>
+            <div class="col-sm-4 mid">
+              <center>
+              <img class="space" src="{{url_for('static', filename='Picture3.png')}}" alt="pic3">
+               <h4 class="bold">{{negative}}</h4></div>
+               <center>
+      </div>
+    </div>
+    <h1>Graph Analysis</h1>
+    <img style="margin-left: -50px;" src={{pngImageB64String}}>
+    <h1>Positive Sentences</h1>
+    <p>{{ps}}</p>
+    <h1>Negative Sentences</h1>
+    <p>{{nes}}</p>
+    <h1>Neutral Sentences</h1>
+    <p>{{nus}}</p>
+    <div class="container-fluid container">
+      <br>
+  </div>
+</body>
+</html>

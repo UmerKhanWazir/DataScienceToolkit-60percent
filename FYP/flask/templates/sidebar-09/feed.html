@@ -1,25 +1,33 @@
 {% extends "./sidebar-09/home.html" %}
 {% block content %} 
-    <div class="w3-row-padding w3-center w3-margin-top" style="margin-left: 220px;">
-      <div class="w3-third">
-        <div class="w3-card w3-container" style="background-color:rgb(239, 243, 247); min-height:460px; width: 900px; height:max-content;">
-          <h1 style="font-size:60px; color:#4070F4">Feed <i class="fa fa-thumbs-up"></i></h1><br> 
-          <br>
+<br>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2" ></div>
+
+      <div class="col-sm-8" style="background-color: white; min-height: 550px; border-radius:10px;" >
+        <div class="card text-center">
+          <h1 class="home__title">Feed </h1><br> 
+          <center>
           {% for item in followed %}
-           <div class="w3-card" style="width:400px; height: fit-content; min-height: 330px; margin-left: 230px;">
+           <div class="card" style="border: outset; width:400px" >
+            <ul class="w3-ul w3-card-4" style="text-align: left; ">
+             <center>
             <tr>
               <br>
+              <a href="/{{item[0][0]}}">
               <img height="125" width="125" style="border-radius: 50%;"src="/static/sidebar/images/{{item[0][5]}}" />
-              <td><a href="/{{item[0][2]}}">{{item[0][1]}}</a></td>
+              <td>{{item[0][1]}}</td>
               <br><br>
+            </a>
             <script>
               var check=false;
             </script>
             {% for pa in path[item[1]] %}
-            <div style="border: outset; width:280px; margin-left: 65px; ">
+            <div  style="border: outset; width:280px; margin-bottom:6px">
             <tr>
               <td><a href="/view-file/{{pa[0]}}">{{pa[0]}}</a></td>
-              <br />
+              <br>
               <script>
                 check=true;
               </script>
@@ -27,9 +35,9 @@
           </div>
             {% endfor %}
             <br />
-            <br />
-            <button id="{{item[0][0]}}" type="button" class="button info" style="margin-left: 80px;">Save Repository
-            </button>
+            <div>
+            <button id="{{item[0][0]}}" type="button" class="btn btn-info " >Save Repository</button>
+          </div>
             <script type="text/javascript">
               document.getElementById("{{item[0][0]}}").onclick = function () {
                 location.href = "/save-to-repository/{{item[0][0]}}";
@@ -46,12 +54,21 @@
             </script>
             <br /><br />
             </tr>
-          </div><br><br>
-            {% endfor %}
-           
+          </center>
+            </ul>
+          
           </div>
         
+        <br><br>
+            {% endfor %}
+          </center>
+          </div>
+          <div class="col-sm-2" ></div> 
     </div>
     </div>
-{% endblock %}     
+    </div>
+    <br>
+{% endblock %}   
+
+
                 

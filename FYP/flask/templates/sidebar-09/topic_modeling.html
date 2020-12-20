@@ -5,29 +5,30 @@
   <div class="row">
     <div class="col-sm-2" ></div>
     
-    <div class="col-sm-8" style="background-color: white;  border-radius:10px; height: 550px; min-width:600px">
-      <h1 class="home__title">Text Summarization</h1><br>
-      <div class="container-fluid" > 
-
-      <form method="POST" action="web-scraping" enctype="multipart/form-data" class="form-group mx-sm-3 mb-2" >
-        <label for="fname">Enter URL here:</label>
-        <input type="text" id="web-scraping" name="url" >
-        <input style="margin-top: -4px;" type="submit" name="textsummarization" class="btn btn-sm btn-primary">
-    </form>
+    <div class="col-sm-8" style="background-color: white;  border-radius:10px; height: 550px;">
       
+      <h1 class="home__title">Topic Modeling</h1>
+      <br>
+      <div class="container-fluid" > 
+        <form method="POST" action="web-scraping" enctype="multipart/form-data" >
+          <label for="fname">Enter URL here:</label>
+          <input type="text" id="web-scraping" name="url" >
+          <input style="margin-top: -4px;"  type="submit" name="topicmodeling" class="btn btn-sm btn-primary ">
+      </form>
+      <br>
 
       <div class="w3-container " style="width:800px; height: 460px; margin-right: 200px;">
         <button id="repo" style="display: inline-block;" class="btn btn-info" data-toggle="tooltip" title="Upload file from repository"><i class="fa fa-upload"></i> Repository</button>
         <script type="text/javascript">
           document.getElementById("repo").onclick = function () {
-            location.href = "/show-repository-for-text-summarization";
+            location.href = "/show-repository-for-topic-modeling";
           };
         </script>
         
         <form method="POST" action="/upload-file" enctype="multipart/form-data" style="margin-left:130px; margin-top:-34px">
-          <div class="btn  btn-info" style="position: relative;
+          <div class="file btn  btn-info" style="position: relative;
           overflow: hidden;">Computer
-          <input type="file" name="fileToUpload" style="position: absolute;
+          <input type="file" name="fileToUpload" multiple style="position: absolute;
           font-size: 50px;
           opacity: 0;
           right: 0;
@@ -35,36 +36,35 @@
         </div>
         <div class="btn btn-sm  btn-primary" style="position: relative;
           overflow: hidden;"> Submit
-          <input type="submit" value="Submit file for text-summarization" name="submit" style="position: absolute;
+          <input type="submit" value="Submit files for topic-modeling" name="submit" style="position: absolute;
           font-size: 50px;
           opacity: 0;
           right: 0;
           top: 0;" />
         </div>
-        </form><br>
+        </form>
    
 
           <div class="form-group shadow-textarea" style="position: relative;">
-            <form  method="POST" action="summary" enctype="multipart/form-data" class="inputtext" style=" font-style: normal;">
+            <form  method="POST" action="topics" enctype="multipart/form-data" class="inputtext" style=" font-style: normal;">
          
-            <textarea class="form-control z-depth-1 textarea"  placeholder="Copy/Paste your own text here..." cols="0" rows="10"   name="summary" id="summary" >{{page}}</textarea>  
+            <textarea class="form-control z-depth-1 textarea"  placeholder="Copy/Paste your own text here..." cols="0" rows="10"  class="contact__input" name="topic" id="topic"  style=" box-sizing: border-box; margin-top: 25px; margin-bottom: 30px; ">{{page}}</textarea>
             
-            <br>
+
             <div style="float: left; ">
-              <button class="btn btn-danger" >Summarize</button>
+              <button class="btn btn-danger" >Topic Modeling</button>
             </div>
             </form >
             <button id="myButton" for="erase" class="btn btn-info cross" ><i class="fa fa-times"></i></button>
             <script type="text/javascript">
               document.getElementById("myButton").onclick = function () {
-                location.href = "/clean-for-textsummarization";
+                location.href = "/clean-for-topicmodeling";
               };
-            
             </script>
             
             <div style="float:right"> 
             <form class="dropup" method="POST" action="/data-cleaning" style="margin-left:20px;" >
-              <div class="col-sm-5">
+              <div class="col-md-5">
               <select name="cleaning" id="cleaning" class="form-control btn-info">
                 <option style="background-color: white;color:black;" value="upper">Upper Case</option>
                 <option style="background-color: white;color:black;"value="lower">Lower Case</option>
@@ -73,8 +73,8 @@
                 <option style="background-color: white;color:black;" value="line">Remove Line Space</option>
               </select>
             </div>  
-              <input style="margin-left: -8px;" type="submit" name="textsummarization" value="Submit" class="btn btn-sm btn-primary"  />
-            </form></div> </div> 
+              <input style="margin-left:-10px; margin-top:2px;" type="submit" name="topicmodeling" value="Submit" class="btn btn-sm btn-primary"  />
+            </form></div>  
           </div>
           </div>
           <div class="col-sm-2"> </div>

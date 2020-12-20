@@ -1,54 +1,59 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
 /*===== VARIABLES CSS =====*/
-:root{
+:root {
   --header-height: 3rem;
   --font-semi: 600;
 }
 .header {
   background-color: #6389f2;
   padding: 1px;
-  text-align:right;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: right;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-style: oblique;
 }
-input[type=text] {
+.navbar-brand {
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-shadow: 4px 4px 4px #aaa;
+}
+input[type="text"] {
   width: 120px;
   height: 30px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 1px;
   font-size: 13px;
-  background-color:  white;
-  background-position: 10px 10px; 
+  background-color: white;
+  background-position: 10px 10px;
   background-repeat: no-repeat;
   padding: 8px 12px 8px 15px;
   border-radius: 20px 20px 20px 20px;
   margin-top: 7px;
   margin-right: 20px;
   transition: width 0.4s ease-in-out;
-  border-color:var(--second-color);
+  border-color: var(--second-color);
   border-style: outset;
 }
 
-input[type=text]:focus {
+input[type="text"]:focus {
   width: 30%;
 }
 /*===== Colores =====*/
-:root{
-  --first-color: #4070F4;
-  --second-color: #0E2431;
+:root {
+  --first-color: #4070f4;
+  --second-color: #0e2431;
 }
 /*===== Fonts =====*/
-:root{
-  --body-font: 'Poppins', sans-serif;
+:root {
+  --body-font: "Poppins", sans-serif;
   --big-font-size: 4rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
 }
-@media screen and (min-width: 768px){
-  :root{
+@media screen and (min-width: 768px) {
+  :root {
     --big-font-size: 3.5rem;
     --h2-font-size: 2rem;
     --normal-font-size: 1rem;
@@ -56,7 +61,7 @@ input[type=text]:focus {
 }
 
 /*===== Margins =====*/
-:root{
+:root {
   --mb-1: 0.5rem;
   --mb-2: 1rem;
   --mb-3: 1.5rem;
@@ -66,7 +71,7 @@ input[type=text]:focus {
 }
 
 /*===== z index =====*/
-:root{
+:root {
   --z-back: -10;
   --z-normal: 1;
   --z-tooltip: 10;
@@ -74,43 +79,50 @@ input[type=text]:focus {
 }
 
 /*===== BASE =====*/
-*,::before,::after{
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
-body{
+body {
   margin: var(--header-height) 0 0 0;
   animation: mymove 5s infinite;
   font-size: var(--normal-font-size);
   color: var(--second-color);
- 
 }
 @keyframes mymove {
-  from {background-color:rgb(239, 243, 247);}
-  to {background-color:rgb(216, 226, 240);}
+  from {
+    background-color: rgb(239, 243, 247);
+  }
+  to {
+    background-color: rgb(216, 226, 240);
+  }
 }
-h1,h2,p{
+h1,
+h2,
+p {
   margin: 0;
 }
-ul{
+ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-a{
+a {
   text-decoration: none;
   color: black;
 }
-img{
+img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
 /*===== CLASS CSS ===== */
-.section-title{
+.section-title {
   position: relative;
   font-size: var(--h2-font-size);
   color: var(--first-color);
@@ -118,7 +130,7 @@ img{
   margin-bottom: var(--mb-4);
   text-align: center;
 }
-.section-title::after{
+.section-title::after {
   position: absolute;
   content: "";
   width: 64px;
@@ -129,7 +141,7 @@ img{
   top: 2rem;
   background-color: var(--first-color);
 }
-.section{
+.section {
   padding-top: 3rem;
   padding-bottom: 2rem;
 }
@@ -138,7 +150,7 @@ img{
 }
 
 /*===== LAYOUT =====*/
-.bd-grid{
+.bd-grid {
   max-width: 1024px;
   display: grid;
   grid-template-columns: 100%;
@@ -147,144 +159,137 @@ img{
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
 }
-.l-header{
+.l-header {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
   background-color: #fff;
-  box-shadow: 0 1px 4px rgba(146,161,176,.15);
+  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
-.workcss{
+.workcss {
   align-self: center;
   text-align: center;
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-5);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   color: black;
 }
 
 /*===== HOME =====*/
-.home{
+.home {
   height: calc(100vh - 3rem);
   row-gap: 1rem;
 }
-.home__data{
+.home__data {
   align-self: center;
 }
-.home__title{
+.home__title {
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-5);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
-  
 }
-.home__title-color{
+.home__title-color {
   color: var(--first-color);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
-.headings{
-  font-family: 'Poppins', sans-serif;
+.headings {
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
-  color: #4070F4;
+  color: #4070f4;
 }
-.headings:hover{
-  color:white;
+.headings:hover {
+  color: white;
 }
-.logo{
-  font-size:18px;
-   color: var(--first-color);
-  
+.logo {
+  font-size: 18px;
+  color: var(--first-color);
 }
-
 
 /* ===== CONTACT =====*/
 
-.contact__input{
+.contact__input {
   width: 100%;
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi);
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: 1.5px solid var(--second-color);
   outline: none;
   margin-bottom: var(--mb-5);
-
 }
 
-
 /* ===== MEDIA QUERIES=====*/
-@media screen and (min-width: 768px){
-  body{
+@media screen and (min-width: 768px) {
+  body {
     margin: 0;
   }
-  .section{
+  .section {
     padding-top: 4rem;
     padding-bottom: 3rem;
   }
-  .section-title{
+  .section-title {
     margin-bottom: var(--mb-6);
   }
-  .section-title::after{
+  .section-title::after {
     width: 80px;
     top: 3rem;
   }
 
-  
-  .home{
+  .home {
     height: 100vh;
   }
-  .home__data{
+  .home__data {
     align-self: flex-end;
   }
-  .home__social{
+  .home__social {
     padding-top: 0;
     padding-bottom: 2.5rem;
     flex-direction: row;
     align-self: flex-end;
   }
-  .home__social-icon{
+  .home__social-icon {
     margin-bottom: 0;
     margin-right: var(--mb-4);
   }
-  .home__img{
+  .home__img {
     width: 457px;
     bottom: 15%;
   }
 
-  .about__container, .skills__container{
-    grid-template-columns: repeat(2,1fr);
+  .about__container,
+  .skills__container {
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     text-align: initial;
   }
- 
-  .contact__form{
+
+  .contact__form {
     width: 360px;
   }
-  .contact__container{
+  .contact__container {
     justify-items: center;
   }
-  
- 
 
-@media screen and (min-width: 1024px){
-  .bd-grid{
-    margin-left: auto;
-    margin-right: auto;
+  @media screen and (min-width: 1024px) {
+    .bd-grid {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .home__img {
+      right: 10%;
+    }
   }
-  .home__img{
-    right: 10%;
-  }  
-}
-@media screen and (max-width: 810px){
-  .row1{
-    justify-items: center;
+  @media screen and (max-width: 810px) {
+    .row1 {
+      justify-items: center;
+    }
   }
-}
 }
 .an {
   position: relative;
@@ -292,6 +297,10 @@ img{
 }
 
 @keyframes mymove {
-  from {bottom: 0px;}
-  to {bottom: 200px;}
+  from {
+    bottom: 0px;
+  }
+  to {
+    bottom: 200px;
+  }
 }

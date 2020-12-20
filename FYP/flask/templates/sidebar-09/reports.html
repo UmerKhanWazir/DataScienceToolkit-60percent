@@ -1,0 +1,45 @@
+{% extends "./sidebar-09/home.html" %}
+{% block content %} 
+<br>
+<div class="container-fluid" id="report">
+    <div class="row">
+      <div class="col-sm-2" ></div>
+
+        <div class="col-sm-8" style="background-color: white; min-width:600px; min-height: 550px;border-radius:10px">
+              <div class="container-fluid text-center">
+                <h1 class="home__title">Reports <i class="fa fa-bar-chart"></i></h1>
+                <br><br>
+                <div class="card"  style="background-color: white; min-width:500px; min-height: 300px;"><br><br>
+                  <ul class="w3-ul w3-card-4"  style="text-align: left;">
+                          {% for path in paths %}
+                          <center>
+                          <div class="col-sm-6" style="margin-bottom: 8px;">
+                          <a href="/view-files/{{path[1]}}" style="font-size:20px; color:black">{{path[1]}}</a>
+                        </div>
+                        <div class="col-sm-6" style="margin-bottom: 8px;">
+                          <button id="/{{path[1]}}" type="button"   class="btn btn-info" >download</button>                        
+                          <script type="text/javascript">
+                              document.getElementById("/{{path[1]}}").onclick = function () {
+                                location.href = "/download-files/{{path[1]}}";
+                              };
+                            </script>
+                            <button id="{{path[1]}}" type="button" class="btn btn-danger" ><i class= "fa fa-trash"></i></button>
+                            <script type="text/javascript">
+                              document.getElementById("{{path[1]}}").onclick = function () {
+                                location.href = "/delete-files/{{path[1]}}";
+                              };
+                            </script>  
+                          </div>                          
+                            </center>
+                            {% endfor %}
+                       </ul>  
+                       </div>
+              </div>
+        </div>
+        <div class="col-sm-2" ></div>
+ </div>
+</div>
+</div>
+  <br>
+
+{% endblock %}

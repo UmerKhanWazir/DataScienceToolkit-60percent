@@ -1,33 +1,38 @@
 {% extends "./sidebar-09/home.html" %}
 {% block content %}    
-    <div class="w3-row-padding w3-center w3-margin-top" style="margin-left: 220px;">
-      <div class="w3-third">
-        <div class="w3-card w3-container" style="background-color:rgb(239, 243, 247); min-height:460px; width: 900px; height:max-content;">
-     <br>     
-    <div
-    class="img bg-wrap text-center py-4"
-    style="background-image: url(/static/sidebar/images/{{u[6]}});"
-  >
-    <div class="user-logo">
-      <div
-        class="img"
-        style="background-image: url(/static/sidebar/images/{{u[5]}});"
-      ></div>
-      <h3>{{u[1]}}</h3>
-    </div>
-  </div>
+<br>
+<div class="container-fluid" id="report">
+    <div class="row">
+      <div class="col-sm-2" ></div>
+
+        <div class="col-sm-8" >
+              <div class="container-fluid text-center" style="background-color: white; min-width:500px; min-height: 400px;border-radius:10px">
+               <br>  
+    <form id="form1" runat="server">
+        <div>
+        <div class="coverpic" style="height: 300px;">
+        <img  src="/static/sidebar/images/{{u[6]}}" style="height: 300px; width:800px; margin-left:20px">
+      </div>
+        <div class="profilepic" >
+        <img  src="/static/sidebar/images/{{u[5]}}" style="width: 150px; height: 150px;   border-radius: 50%;" >
+      </div>
+      </div><br><br><br>
+      <h2 >{{u[1]}}</h2>
+    </form>
   <br />
-  <button id="Button" type="button" class="button info">Follow Me!</button>
+  <center>
+  <button id="Button" type="button" class="btn btn-info">Follow Me!</button>
  
   <script type="text/javascript">
     document.getElementById("Button").onclick = function () {
-      location.href = "/follow/{{u[0]}}";
+      location.href = "/send-notification/{{u[0]}}";
     };
 
   </script>
   <br />
   <br />
   <script>check = false;</script>
+  {% if path is not false %}
   {% for item in path %}
   
   <tr>
@@ -38,11 +43,11 @@
   {% endfor %}
   <br />
   <br />
-  <div style="margin-left:320px;" >
-  <button id="myButton" type="button" class="button info"  >
+
+  <button id="myButton" type="button" class="btn btn-info"  >
     Click to Save Repository
   </button><br>
-</div>
+</center>
 </div>
 </div>
 </div> 
@@ -57,7 +62,17 @@
       document.getElementById("myButton").style.display="none";
     }
   </script>
-  
+{% endif %}
+{% if path is false %}
+
+  <p>Send follow request to user to view repository</p>
+
+{% endif %}
+
+</div>
+<div class="col-sm2"></div>
+</div></div></div>
+<br>
 {% endblock %}
               
                 

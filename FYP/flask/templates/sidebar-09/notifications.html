@@ -1,0 +1,35 @@
+{% extends "./sidebar-09/home.html" %}
+{% block content %}
+<br>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-2" ></div>
+
+            <div class="col-sm-8" style="background-color: white; min-width:600px; min-height: 550px;border-radius:10px">
+                <br>
+               <center> <h3>Follow Requests</h3><br><br></center>
+                  <div class="card text-center">
+                    
+                    
+                    {% for user in users %}
+                        <ul class="w3-ul w3-card-4" style="text-align: left;">
+                        <li class="w3-display-container" style="min-height: 50px;"><a href="/{{user[0]}}">{{user[1]}}</a>
+                        <button id="{{user[0]}}" type="button" class="btn btn-success" style="float:right;">Accept</button>
+                        <script type="text/javascript">
+                            document.getElementById("{{user[0]}}").onclick = function () {
+                            location.href = "/follow/{{user[0]}}";
+                            };
+                        </script>
+                        </ul>
+                    {% endfor %}
+                    
+                    
+                
+                  </div>
+            </div>
+            <div class="col-sm-2" ></div>
+     </div>
+  </div>
+  </div>
+<br>
+{% endblock %}

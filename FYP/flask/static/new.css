@@ -1,0 +1,264 @@
+body {
+  background-color: rgb(11, 64, 111);
+  box-sizing: border-box;
+}
+
+* {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+input[type="text"] {
+  width: 150px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid;
+  border-radius: 1px;
+  border-style: outset;
+  font-size: 13px;
+  border-color: dodgerblue;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 8px 12px 8px 15px;
+  border-radius: 10px 10px 10px 10px;
+  margin-top: 7px;
+  margin-right: 20px;
+  transition: width 0.4s ease-in-out;
+}
+input[type="text"]:focus {
+  width: 30%;
+  border-color: dodgerblue;
+}
+
+.home__title {
+  font-size: 40px;
+  color: #4070f4;
+  text-align: center;
+}
+.col-sm-8 {
+  padding: 16px;
+}
+.navbar {
+  margin-bottom: 0;
+}
+.navbar-brand {
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-shadow: 4px 4px 4px #aaa;
+}
+.bold {
+  font-weight: bolder;
+}
+.footer {
+  background-color: black;
+}
+h1 {
+  font-weight: bold;
+  text-shadow: 3px 3px 3px rgb(186, 185, 185);
+}
+.shadow-textarea textarea.form-control::placeholder {
+  font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+  padding-left: 0.8rem;
+}
+#upload_button {
+  display: inline-block;
+}
+#upload_button input[type="file"] {
+  display: none;
+}
+.dropdown-menu-right {
+  margin-right: 445px;
+  margin-top: -50px;
+}
+.container {
+  background-color: rgb(218, 253, 253);
+  padding: 12px;
+  width: 600px;
+}
+h3 {
+  color: rgb(11, 64, 111);
+  text-shadow: 4px 4px 4px rgb(150, 146, 146);
+}
+h4,
+h2 {
+  text-shadow: 4px 4px 4px rgb(168, 166, 166);
+  font-weight: bold;
+}
+
+.bn {
+  float: right;
+}
+.cross {
+  padding: 2px 6px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 70%;
+}
+.cont {
+  width: 800px;
+}
+.tarea {
+  width: 550px;
+  border-radius: 2%;
+  margin-left: 100px;
+}
+.w3-theme {
+  color: black !important;
+  background-color: rgb(195, 210, 225);
+}
+.w3-text-theme {
+  color: #8bc5ff;
+}
+a:hover {
+  text-decoration: none;
+}
+.fass:hover {
+  color: rgb(11, 64, 111);
+}
+.w3-card {
+  width: 400px;
+  height: fit-content;
+  min-height: 330px;
+  margin-left: 230px;
+}
+.space {
+  padding-right: 10px;
+}
+.coverpic {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 400px;
+  width: 80%;
+}
+.profilepic {
+  border-radius: 50%;
+  position: absolute;
+  margin-top: -80px;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .textarea {
+    width: 520px;
+  }
+  .bn {
+    float: left;
+    margin-left: 150px;
+  }
+  .cross {
+    margin-right: 280px;
+  }
+  .tarea {
+    width: 450px;
+  }
+  .w3-card {
+    margin-left: 165px;
+  }
+  .profilepic {
+    left: 240px;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .col-sm-8 {
+    width: 97%;
+  }
+  .textarea {
+    width: 660px;
+  }
+  .bn {
+    float: right;
+    margin-right: 150px;
+  }
+  .cross {
+    margin-right: 140px;
+  }
+  .col-sm-10 {
+    width: 99.8%;
+  }
+  .tarea {
+    width: 540px;
+  }
+  .w3-card {
+    margin-left: 255px;
+  }
+  .profilepic {
+    left: 290px;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .textarea {
+    width: 410px;
+  }
+  .bn {
+    float: left;
+    margin-left: 50px;
+  }
+  .cross {
+    margin-right: 390px;
+  }
+  .tarea {
+    width: 280px;
+  }
+  .w3-card {
+    margin-left: 35px;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+  .mid {
+    align-items: center;
+    float: left;
+  }
+  .profilepic {
+    left: 160px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .col-sm-8 {
+    width: 97%;
+  }
+  .textarea {
+    width: 890px;
+  }
+  .bn {
+    float: right;
+    margin-right: -90px;
+  }
+  .cross {
+    margin-right: -90px;
+  }
+  .w3-card {
+    margin-left: 230px;
+  }
+  .profilepic {
+    left: 400px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .col-sm-8 {
+    width: 67%;
+  }
+  .textarea {
+    width: 745px;
+  }
+  .bn {
+    margin-right: 55px;
+  }
+  .cross {
+    margin-right: 55px;
+  }
+  .profilepic {
+    left: 370px;
+  }
+}

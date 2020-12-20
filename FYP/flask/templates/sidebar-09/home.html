@@ -2,127 +2,92 @@
 <!DOCTYPE html>
 <html lang="en">    
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link
       rel="stylesheet"
-      href="./static/home.css"
-    /> 
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
-      rel="stylesheet"
+      href="./static/new.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="{{url_for('static', filename='./sidebar/css/style.css')}}"
-    />
-    <link
-      rel="stylesheet"
-      href="{{url_for('static', filename='./sidebar/css/bootstrap.min.css')}}"
-    />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-         <link href='https://kit.fontawesome.com/a076d05399.js'>
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
-        <title>Home</title>
+    
+   
+  
+ 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href='https://kit.fontawesome.com/a076d05399.js'>
+     
     </head>
     <body>
    
-      <!-- Navbar (sit on top) -->
-<div class="w3-top">
-<div class="w3-bar w3-white w3-card " id="myNavbar">
-  <a href="/home" class="w3-bar-item w3-button w3-wide w3-hover-white"><span class="home__title-color" style="font-size:large; font-family: 'Tangerine', serif;" >DATA SCIENCE TOOLKIT</span></a>
-  <!-- Right-sided navbar links -->
-  <div class="w3-right w3-hide-small">
-    <a href="/text-summarization" class="w3-bar-item w3-button w3-hover-light-blue"><span class="home__title-color" ><i class="fa fa-wrench"></i> Text Summarization</span></a>
-    <a href="#home" class="w3-bar-item w3-button  w3-hover-light-blue"><span class="home__title-color" ><i class="fa fa-wrench"></i> Topic Modeling</span></a>
-    <a href="#work" class="w3-bar-item w3-button  w3-hover-light-blue"></i><span class="home__title-color" ><i class="fa fa-wrench"></i> Sentiment Analysis</span></a>
-    <a href="#about" class="w3-bar-item w3-button  w3-hover-light-blue"></i><span class="home__title-color" ><i class="fa fa-bar-chart "></i> Reports</span></a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button id="profile" class="w3-button w3-padding-x-large w3-hover-light-blue" title="Profile"><span class="home__title-color"><i class="fa fa-user"></i> Profile</span></button>     
-      <script type="text/javascript">
-        document.getElementById("profile").onclick = function () {
-          location.href = "/profile";
-        };
-      </script>
-      
-      <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
-        <a href="/feed" class="w3-bar-item w3-button w3-hover-opacity w3-hover-light-blue"><i class="fa fa-thumbs-up"></i> Feed</a>
-        <a href="/repository" class="w3-bar-item w3-button w3-hover-opacity w3-hover-light-blue"><i class="fa fa-database"></i> Repository</a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-opacity w3-hover-light-blue"><i class="fa fa-sign-out"></i> Logout</a>
-      </div>
-    </div>
-    <a href="#" class="w3-bar-item w3-button w3-white w3-hover-white"><span style="color: white;">.</span></a>
-  </div>
-  <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-</div>
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blues w3-large w3-padding-16">×</a>
-  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue">Text Summarization</a>
-  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue">Topic Modelling</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue">Sentiment Analysis</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue">Reports</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-blue">Profile</a>
-</nav>
+      <nav class="navbar navbar-inverse" >
+        <div class="container-fluid">
+          <div class="navbar-header" >
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="/home" style="color: white;">Data Science Toolkit</a>
+          </div>
+          <section style="float: right;">
+          <div class="collapse navbar-collapse" id="myNavbar" >
+            <ul class="nav navbar-nav" >
+              
+              <li><a href="/text-summarization" style="color:white">Text Summarization</a></li>
+              <li><a href="/topic-modeling"style="color:white">Topic Modeling</a></li>
+              <li><a href="/sentiment-analysis"style="color:white">Sentiment Analysis</a></li>
+              <li><a href="/reports"  style="color:white"><i class="fa fa-bar-chart "></i> Reports</a></li>
+                  <li class="dropdown">
+                      <a class="dropdown-toggle" style="color:white" data-toggle="dropdown" href="#"> More <span class="caret"></span></a>
+                      <script type="text/javascript">
+                        document.getElementById("profile").onclick = function () {
+                          location.href = "/profile";
+                        };
+                      </script>
+                      <ul class="dropdown-menu">
+                        <li><a href="/feed"><i class="fa fa-thumbs-up"style="color:dodgerblue"></i> Feed</a></li>
+                        <li><a href="/receive-notification"><i class="fa fa-sign-out"style="color:dodgerblue"></i> Notification</a></li>
+                        <li><a href="/repository"><i class="fa fa-database"style="color:dodgerblue"></i> Repository</a></li>
+                        <li><a href="/profile"><i class="fa fa-user"style="color:dodgerblue"></i> Profile</a></li>
+                        <li><a href="/"><i class="fa fa-sign-out"style="color:dodgerblue"></i> Logout</a></li>
+                      </ul>
+                    </li>
+            </ul>
+          <!--{% include "./includes/message.html" %}-->
+            <form class="navbar-form navbar-left" action="/users-search" method="POST">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search users..." name="search">
+                <div class="input-group-btn">
+                  <button class="btn btn-info" type="submit" style="margin-top:6px; height:29px">
+                    <i class="glyphicon glyphicon-search" ></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+         </section>
+        </div>
+      </nav>
+  {% include "./includes/message.html" %}
   
-           
-        <!-- Header -->
-        <header>
-  <br><br>
-  <form action="/users-search" method="POST">
-    <input
-      name="search"
-      class="form-control"
-      type="text"
-      placeholder="Search Users"
-      aria-label="Search"
-    />
-  </form>
     {% block content %} {% endblock %}
 
+ 
  <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64" style="height:230px;" >
-    <a href="/home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Home Page</a>
-    <div class="w3-xlarge w3-section">
-      <i class="fa fa-google w3-hover-opacity"></i>
-      <i class="fa fa-github w3-hover-opacity"></i>
-      <p>dstoolkit@gmail.com</p>
-      </div>
+ <footer class="footer text-center" style="background-color: black; color:white; height:160px">
+  <br>
+    <a class="up-arrow" href="/home" data-toggle="tooltip" title="TO TOP" style="color:white">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a><br>
+  <i class="fa fa-google"></i>
+  <i class="fa fa-github "></i>
+  <br><br>
+  <h4>dstoolkit@gmail.com</h4>
+  </div>
   </footer>
-<script>
-  
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
-
-</script>
 </body>
 </html>
     

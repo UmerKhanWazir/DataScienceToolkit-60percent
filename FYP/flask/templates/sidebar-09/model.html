@@ -1,0 +1,54 @@
+{% extends "./sidebar-09/home.html" %}
+{% block content %} 
+<br>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-2" ></div>
+
+          <div class="col-sm-8">
+            <div class="container-fluid"style="background-color: white;  border-radius:10px">
+            <h1 class="home__title">Topic Classifier </h1><br>
+            <div class="container-fluid">
+            <h3>Your Text</h3>
+            <div>
+              <textarea class="form-control z-depth-1 tarea" rows="7" placeholder="">{{page}}</textarea>
+            </div>
+            <h3>Topics</h3><br>
+            <div class="container-fluid container">
+              
+              {% for t in topic %}
+              <h3>topic:</h3>
+              {{t}} <br>
+              {% endfor %}
+            </div>
+            <br><br>
+
+            <div class="container-fluid">
+            <center> 
+              <form method="POST" action="save-model" enctype="multipart/form-data">
+                <label for="fname">Enter file name to save:</label><br>
+                <input type="text" id="fname" name="fname">
+                <label></label>
+                <input type="submit" class="btn btn-danger" value=" Save">
+              </form></center> 
+              <br>
+            </div>
+            </div>
+            </div>
+
+          </div>
+
+          <div class="col-sm-2"></div>
+        </div>
+      </div>
+</div>
+
+
+
+
+<script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();   
+    });
+    </script>
+{% endblock %}

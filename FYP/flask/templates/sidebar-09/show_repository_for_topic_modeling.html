@@ -1,0 +1,47 @@
+{% extends "./sidebar-09/home.html" %}
+{% block content %} 
+<br>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2" ></div>
+  
+        <div class="col-sm-8" style="background-color: white;  border-radius:10px">
+          <div class="container-fluid">   
+                    <h1 class=home__title >Respository <i class="fa fa-database"></i></h1>
+                    <div class="container-fluid">
+                    <h3>My Files</h3><br><br>
+                    <center>
+                    {% for item in path %}
+                      <tr>
+                        <div style="border:outset; width:280px;">
+                        <td><a href="/upload-from-repository-topicmodeling/{{item[0]}}">{{item[0]}}</a></td>
+                        <br /><br />
+                      </div>
+                      </tr>
+                      {% endfor %}
+                      <br />
+                      <br />
+                      <br />
+                    </center>
+                      <h3>Other Repositories</h3><br><br>
+                    <center>
+                      {% for item in path1 %}
+                      <tr>
+                        <div style="border:outset; width:280px; ">
+                        <td><a href="/upload-from-repository-topicmodeling/{{item[0]}}">{{item[0]}}</a></td>
+                        <br /><br />
+                      </div>
+                      </tr>
+                      {% endfor %}
+                    </center>
+                    <br>
+                  </div>
+               </div>
+            </div>
+    </div>
+
+            <div class="col-sm-2" ></div>
+     </div>
+  </div>
+  {% endblock %}
+                

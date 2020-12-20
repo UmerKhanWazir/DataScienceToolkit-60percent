@@ -1,0 +1,97 @@
+{% extends "./sidebar-09/home.html" %}
+{% block content %}  
+<br>
+    <div class="container-fluid ">
+        <div class="row">
+          <div class="col-sm-2" ></div>
+
+          <div class="col-sm-8">
+            <div class="container-fluid"style="background-color: white;  border-radius:10px">
+              <h1 class="home__title">Sentiment Analyzer </h1><br>
+              <div class="container-fluid">
+            <h3>Your Text Here</h3>
+            <div>
+         <center><textarea class="form-control z-depth-1 tarea"  placeholder="Copy/Paste your own text here..." rows="7">{{page}}</textarea></center>   
+            </div>
+
+            <br><br>
+            <h3>Document Level Analysis</h3><br>
+          <div class="container-fluid container">
+              <br>
+            <div class="container-fluid">
+                <div class="row">
+                      <div class="col-sm-4 mid">
+                        <img class="space" src="{{url_for('static', filename='Picture1.png')}}" alt="pic1">
+                        <center>  <h4 class="bold">{{positive}}</h4></div></center>
+                      <div class="col-sm-4 ">
+                        <img class="space"src="{{url_for('static', filename='Picture2.png')}}" alt="pic2">
+                        <center> <h4 class="bold">{{neutral}}</h4></div><center>
+                      <div class="col-sm-4 mid">
+                        <img class="space" src="{{url_for('static', filename='Picture3.png')}}" alt="pic3">
+                        <center> <h4 class="bold">{{negative}}</h4></div><center>
+                </div>
+              </div>
+          </div>
+          <br><br>
+
+          <h3>GRAPH Analysis</h3><br>
+          <div style="padding-left:0px;">
+            
+        <img src={{image}} style="width:800px; height:400px;">
+          </div><br>
+
+          <h3>Sentence Level Analysis</h3><br>
+          <div class="container-fluid container" style="padding: 30px;">
+          <h4>Positive sentences: </h4>
+          {{ps}}
+          <h4>Negative sentences: </h4>
+          {{nes}}
+          <h4>Neutral sentences: </h4>
+          {{nus}}  
+          
+        </div><br>
+
+        <center>
+        <form method="POST" action="save-sentiment" enctype="multipart/form-data">
+          <label for="fname">Enter file name to save:</label><br>
+          <input type="text" id="fname" name="fname">
+          <label></label>
+          <input type="submit" class="btn btn-danger" value=" Save">
+        </form></center>
+        <br>
+        </div>
+        </div>
+   </div>
+
+          <div class="col-sm-2"></div>
+        </div>
+      </div>
+
+
+
+
+
+<script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();   
+    });
+
+function smile() {
+  var a;
+  a = document.getElementById("div1");
+  a.innerHTML = "&#xf118;";
+  setTimeout(function () {
+      a.innerHTML = "&#xf11a;";
+    }, 1000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf119;";
+    }, 2000);
+  setTimeout(function () {
+      a.innerHTML = "&#xf11a;";
+    }, 3000);
+}
+smile();
+setInterval(smile, 4000);
+</script>
+<br>
+{% endblock %}

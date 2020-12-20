@@ -1,39 +1,126 @@
-{% extends "./sidebar-09/home.html" %}
-{% block content %} 
-   <div class="w3-center">
-        <h1 class="home__title" style="text-align:center">Welcome to<span class=home__title-color> Data Science Tools  <i class="fa fa-cogs fa-spin"></i></span>  </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>homepage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link
+  rel="stylesheet"
+  href="./static/new.css"
+/> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://kit.fontawesome.com/a076d05399.js'>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse" >
+  <div class="container-fluid">
+    <div class="navbar-header" >
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/home" style="color: white;">Data Science Toolkit</a>
+    </div>
+    <section style="float: right;">
+    <div class="collapse navbar-collapse" id="myNavbar" >
+      <ul class="nav navbar-nav" >
+      
+        <li><a href="/text-summarization" style="color:white">Text Summarization</a></li>
+        <li><a href="/topic-modeling"style="color:white">Topic Modeling</a></li>
+        <li><a href="/sentiment-analysis"style="color:white">Sentiment Analysis</a></li>
+        <li><a href="/reports"  style="color:white"><i class="fa fa-bar-chart "></i> Reports</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" style="color:white" data-toggle="dropdown" href="#">More <span class="caret"></span></a>
+                <script type="text/javascript">
+                  document.getElementById("profile").onclick = function () {
+                    location.href = "/profile";
+                  };
+                </script>
+                <ul class="dropdown-menu">
+                  <li><a href="/feed"><i class="fa fa-thumbs-up"style="color:dodgerblue"></i> Feed</a></li>
+                  <li><a href="/receive-notification"><i class="fa fa-sign-out"style="color:dodgerblue"></i> Notification</a></li>
+                  <li><a href="/repository"><i class="fa fa-database"style="color:dodgerblue"></i> Repository</a></li>
+                  <li><a href="/profile"><i class="fa fa-user"style="color:dodgerblue"></i> Profile</a></li>
+                  <li><a href="/"><i class="fa fa-sign-out"style="color:dodgerblue"></i> Logout</a></li>
+                </ul>
+              </li>
+      </ul>
+    <!--{% include "./includes/message.html" %}-->
+      <form class="navbar-form navbar-left" action="/users-search" method="POST">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search users..." name="search">
+          <div class="input-group-btn">
+            <button class="btn btn-info" type="submit" style="margin-top:6px; height:29px">
+              <i class="glyphicon glyphicon-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+   </section>
+  </div>
+</nav>
+ 
+  
+<section>
+  <header>
+      <br><br>
+      <div class="w3-center">
+        <h1  style="font-size: 50px; color: white;">Welcome to Data Science Tools  <i class="fa fa-cogs fa-spin"></i></h1>
     </div>
   </header>
-  <br><br>
+  <br><br><br><br>
   
-  <section>
   <div class="w3-row-padding w3-center w3-margin-top">
   <div class="w3-third">
     <a href="/text-summarization">
-    <div class="w3-card w3-white w3-hover-opacity w3-hover-blue w3-container" style="min-height:260px; width:430px">
-    <h3>Text Sumarization</h3><br>
-    <i class="fa fa-file-text w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-    <p> Text summarization provides summary of document.</p>
+    <div class="card w3-white w3-hover-opacity w3-hover-white w3-container" style="min-height: 220px; ">
+    <h2>Text Sumarization</h2><br>
+    <i class="fa fa-file-text fass w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+    <p>Text summarization provides summary of uploaded document.</p>
     </div></a>
   </div>
   
-  <div class="w3-third">
-    <a href="#home">
-    <div class="w3-card w3-white w3-hover-opacity w3-hover-blue w3-container" style="min-height:260px;  width:430px">
-    <h3>Sentiment Analysis</h3><br>
-    <i class="fa fa-smile-o w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-    <p>Sentiment analysis checif if document is positive, negative or neutral.</p>
-    </div></a>
-  </div>
   
   <div class="w3-third">
-    <a href="#">
-    <div class="w3-card w3-white w3-hover-opacity w3-hover-blue w3-container" style="min-height:260px;  width:410px">
-    <h3>Topic Modelling</h3><br>
-    <i class="fa fa-desktop w3-margin-bottom w3-text-theme " style="font-size:120px"></i>
-    <p>Topic modeling clusters word groups  that best characterize a set of documents.</p>
+    <a href="/sentiment-analysis">
+    <div class="card w3-white w3-hover-opacity w3-hover-white w3-container" style="min-height: 210px;">
+    <h2>Sentiment and Tone Analysis</h2><br>
+    <i class="fa fa-smile-o fass w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+    <p>These tools check if document is positive, negative or neutral and also emotions expressed in document.</p>
+    </div></a>
+  </div>
+  <div class="w3-third">
+    <a href="/topic-modeling">
+    <div class="card w3-white w3-hover-opacity w3-hover-white w3-container" style="min-height: 220px;">
+    <h2>Topic Modeling</h2><br>
+    <i class="fa fa-desktop fass w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+   <p>Topic modeling clusters word groups that best characterize a set of documents.</p>
     </div></a>
   </div>
   </div>
   </section>
-  <br> {% endblock %}  
+  <br><br>
+
+  <!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64" >
+
+<div class="w3-xlarge w3-section">
+<i class="fa fa-google w3-hover-opacity"></i>
+<i class="fa fa-github w3-hover-opacity"></i>
+<h4>dstoolkit@gmail.com</h4>
+</div>
+</footer>
+
+</body>
+</html>
+
+
+
